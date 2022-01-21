@@ -9,7 +9,7 @@ export class AppComponent implements OnInit {
   title = 'myApp';
   name="Sunflower";
   imgUrl="../../assets/img/sunflower.jpg";
-  data:any
+  data:string="";
 
  
   ngOnInit(): void {
