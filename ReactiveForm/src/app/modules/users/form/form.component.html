@@ -1,0 +1,109 @@
+
+    <form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+      <div class="container">
+        <div>
+          <label for="firstName">First Name: </label><br />
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder="Enter first Name"
+            formControlName="firstName"
+            class="text-box"
+          />
+        <div *ngIf="getvalue['firstName'].touched && getvalue['firstName'].invalid">
+            <div class="text-danger" *ngIf="getvalue['firstName'].errors && getvalue['firstName'].errors['required']">*firstname is required</div>
+            <div class="text-danger" *ngIf="getvalue['firstName'].errors && getvalue['firstName'].errors['minlength']">*minimum length should be 3</div>
+        </div>
+        </div>
+
+        <div>
+          <label for="lastName">Last Name: </label><br />
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="Enter last Name"
+            formControlName="lastName"
+            class="text-box"
+          />
+          <div *ngIf="getvalue['lastName'].touched && getvalue['lastName'].invalid">
+            <div class="text-danger" *ngIf="getvalue['lastName'].errors && getvalue['lastName'].errors['required']">*lastname is required</div>
+        </div>
+        </div>
+
+        <div>
+          <label for="e-mail">E-mail: </label><br />
+          <input
+            type="text"
+            id="e-mail"
+            name="e-mail"
+            placeholder="abc12@gmail.com"
+            formControlName="email"
+            class="text-box"
+          />
+          <div *ngIf="getvalue['email'].touched && getvalue['email'].invalid">
+            <div class="text-danger" *ngIf="getvalue['email'].errors && getvalue['email'].errors['required']">*enter proper format</div>
+        </div>
+        </div>
+
+        <div>
+          <label for="contact">Contact no.: </label><br />
+          <input
+            type="text"
+            id="contact"
+            name="contact"
+            placeholder="+91 1234567890"
+            formControlName="contact"
+            class="text-box"
+          />
+        </div>
+
+        <div>
+          <label for="gender">Gender: </label><br />
+          <input
+            type="radio"
+            name="gender"
+            id="female"
+            value="female"
+            formControlName="gender"
+          />Female
+          <input
+            type="radio"
+            name="gender"
+            id="male"
+            value="male"
+            formControlName="gender"
+          />Male
+        </div>
+
+        <div>
+          <label for="d.o.e">Date of Employment: </label><br />
+          <input
+            type="date"
+            name="date"
+            id="date"
+            formControlName="date"
+            class="text-box"
+          />
+        </div>
+
+        <div>
+          <label for="department">Department: </label><br />
+          <select name="department" id="department" formControlName="department">
+            <option value="angular">Angular</option>
+            <option value="frontend">FrontEnd</option>
+            <option value=".net">.NET</option>
+            <option value="qa">QA</option>
+            <option value="database">Database</option>
+          </select>
+        </div>
+
+        <div>
+          <button type="submit">Submit</button>
+          <button type="reset">Reset</button>
+        </div>
+      </div>
+    </form>
+
+<!-- {{registrationform.value|json}} -->

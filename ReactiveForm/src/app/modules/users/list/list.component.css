@@ -1,0 +1,16 @@
+html,body{
+    padding: 0;
+    margin:0;
+    line-height: 1.5;
+}
+
+.table{
+    padding:20px;
+    margin:20px;
+    border-collapse: collapse;
+    border-color: 1px solid black;
+}
+
+.padding{
+    padding:20px;
+}
