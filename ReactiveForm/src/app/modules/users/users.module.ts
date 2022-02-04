@@ -7,6 +7,7 @@ import { FormComponent } from './form/form.component';
 import { ListComponent } from './list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { FormService } from './service/form.service';
 
 
 @NgModule({
@@ -21,6 +22,9 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule
+  ],
+  providers:[
+    FormService
   ]
 })
 export class UsersModule { }

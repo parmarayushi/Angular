@@ -21,5 +21,36 @@
       "name": "Android"
     }
   ],
-  "form": []
+  "form": [
+    {
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "9421658732",
+      "gender": "female",
+      "date": "2022-02-21",
+      "department": "Database",
+      "id": 1
+    },
+    {
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "9421658732",
+      "gender": "female",
+      "date": "2022-02-21",
+      "department": "Android",
+      "id": 2
+    },
+    {
+      "firstName": "mrunal",
+      "lastName": "patel",
+      "email": "mrunalpatel2@gmail.com",
+      "contact": "9421658732",
+      "gender": "male",
+      "date": "2022-02-21",
+      "department": "QA",
+      "id": 4
+    }
+  ]
 }

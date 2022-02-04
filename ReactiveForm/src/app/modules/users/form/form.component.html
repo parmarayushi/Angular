@@ -43,7 +43,8 @@
             class="text-box"
           />
           <div *ngIf="getvalue['email'].touched && getvalue['email'].invalid">
-            <div class="text-danger" *ngIf="getvalue['email'].errors && getvalue['email'].errors['required']">*enter proper format</div>
+            <div class="text-danger" *ngIf="getvalue['email'].errors && getvalue['email'].errors['required']">*email is required</div>
+            <div class="text-danger" *ngIf="getvalue['email'].errors && getvalue['email'].errors['email']">*enter proper format</div>
         </div>
         </div>
 
@@ -91,16 +92,12 @@
         <div>
           <label for="department">Department: </label><br />
           <select name="department" id="department" formControlName="department">
-            <option value="angular">Angular</option>
-            <option value="frontend">FrontEnd</option>
-            <option value=".net">.NET</option>
-            <option value="qa">QA</option>
-            <option value="database">Database</option>
+            <option *ngFor="let department of departmentData" [value]="department.name"> {{department.name}}</option>
           </select>
         </div>
 
         <div>
-          <button type="submit">Submit</button>
+          <button type="submit" [disabled]="registrationform.invalid" routerLink="submit">Submit</button>
           <button type="reset">Reset</button>
         </div>
       </div>

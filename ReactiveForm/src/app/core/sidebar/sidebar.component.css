@@ -1,0 +1,6 @@
+aside {
+    display: flex;
+    height: 100%;
+    flex: 0 0 200px;
+    background-color: aqua;
+  }

@@ -4,13 +4,12 @@ html,body{
     line-height: 1.5;
 }
 
-.table{
-    padding:20px;
-    margin:20px;
-    border-collapse: collapse;
-    border-color: 1px solid black;
+table,td,th{
+    padding:5px;
+    margin:10px;
+    border: 1px solid black;
 }
 
-.padding{
-    padding:20px;
+.button{
+    margin: 5px;
 }
