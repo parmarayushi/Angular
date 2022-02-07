@@ -1,6 +1,28 @@
 aside {
     display: flex;
+    font-size: 30px;
     height: 100%;
     flex: 0 0 200px;
-    background-color: aqua;
+    background-color: rgb(204, 200, 200);
+  }
+
+  a{
+    color: black;
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+ 
+  }
+  ul{
+    padding:0;
+    width: 100%;
+  }
+  li{
+    list-style: none;
+    padding: 10px;
+  }
+
+  a:hover{
+    background-color: white;
+    border-radius: 5px;
   }

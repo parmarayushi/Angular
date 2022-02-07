@@ -80,7 +80,7 @@ export class FormComponent implements OnInit {
         alert('Something Went Wrong');
       }
     );
-    this.router.navigate(['submit']);
+    this.router.navigate(['reactive']);
   }
 
   updateUser() {
@@ -93,7 +93,7 @@ export class FormComponent implements OnInit {
         alert('Something Went Wrong');
       }
     );
-    this.router.navigate(['submit']);
+    this.router.navigate(['reactive']);
   }
 
   resetForm() {

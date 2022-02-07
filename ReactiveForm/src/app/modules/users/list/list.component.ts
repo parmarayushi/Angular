@@ -10,6 +10,7 @@ import { FormService } from '../service/form.service';
 })
 export class ListComponent implements OnInit {
   userData: User[];
+  searchText: string;
   constructor(private service: FormService, private router: Router) {}
 
   ngOnInit(): void {
@@ -30,12 +31,20 @@ export class ListComponent implements OnInit {
   deleteUser(id: number) {
     this.service.deleteUser(id).subscribe(
       (result) => {
-        alert(id +' is Deleted');
+        alert(id + ' is Deleted');
         this.getUserData();
       },
       (error) => {
         alert('Something Went Wrong');
       }
     );
+  }
+
+  OnSearch(){
+    if(this.searchText===""){
+      this.ngOnInit()
+    }else{
+      this.userData=this.userData.filter((result:User)=>{return result.firstName.toLowerCase().match(this.searchText.toLowerCase())})
+    }
   }
 }

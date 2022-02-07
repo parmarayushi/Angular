@@ -1,6 +1,7 @@
-<button routerLink="add">Add</button>
-<input type="search" placeholder="search">
+<button  class="button" routerLink="add">Add</button>
+<input type="search" placeholder="Search" [(ngModel)]="searchText" (input)="OnSearch()">
 <body>
+
     <table class="table">
         <thead>
             <tr>
@@ -16,10 +17,10 @@
         <tbody>
             <tr *ngFor="let user of userData; let i=index">
                 <th scope="row">{{i+1}}.</th>
-                <td>{{user.firstName+""+user.lastName}}</td>
+                <td>{{user.firstName+" "+user.lastName}}</td>
                 <td>{{user.email}}</td>
                 <td>{{user.gender}}</td>
-                <td>{{user.date | date:'mm/dd/yyyy'}}</td>
+                <td>{{user.date | date: 'MM/dd/yyyy'}}</td>
                 <td>{{user.department}}</td>
                 <td>
               <a routerLink="edit/{{user.id}}">Edit</a>
@@ -27,6 +28,7 @@
             </td>
         </tbody>
     </table>
+
  
 
 

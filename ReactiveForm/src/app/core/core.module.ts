@@ -16,6 +16,7 @@ import { HeaderComponent } from './header/header.component';
     CoreRoutingModule
   ],
 exports:[
+  HeaderComponent,
   SidebarComponent
 ]
 })

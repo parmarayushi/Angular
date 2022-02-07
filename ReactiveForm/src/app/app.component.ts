@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder,Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-root',
@@ -7,23 +7,12 @@ import { FormBuilder,Validators } from '@angular/forms';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  
-  constructor(private fb: FormBuilder){}
-  
-  registrationform=this.fb.group({
-  firstName:['',Validators.required],
-  lastName:['',Validators.required],
-  address:['',Validators.required],
-  contact:['',Validators.required],
-  gender:[''],
-  course:['html']
-});
-
-  ngOnInit(): void {
-      console.log(this.registrationform)
+  title(title: any) {
+    throw new Error('Method not implemented.');
   }
-
-  onSubmit(){
-    console.log(this.registrationform);
+  
+  constructor(){}
+  ngOnInit(): void {
+    
   }
 }

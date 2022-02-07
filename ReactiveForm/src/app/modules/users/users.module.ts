@@ -14,7 +14,7 @@ import { FormService } from './service/form.service';
   declarations: [
     UsersComponent,
     FormComponent,
-    ListComponent
+    ListComponent,
   ],
   imports: [
     CommonModule,
