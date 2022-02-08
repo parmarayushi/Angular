@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from '../model/form.model';
+import { Department, User } from '../model/form.model';
 import { FormService } from '../service/form.service';
 
 @Component({
@@ -10,11 +10,13 @@ import { FormService } from '../service/form.service';
 })
 export class ListComponent implements OnInit {
   userData: User[];
-  searchText: string;
+  searchText: string = '';
+  department: Department[];
   constructor(private service: FormService, private router: Router) {}
 
   ngOnInit(): void {
     this.getUserData();
+    this.getdept();
   }
 
   getUserData() {
@@ -40,11 +42,7 @@ export class ListComponent implements OnInit {
     );
   }
 
-  OnSearch(){
-    if(this.searchText===""){
-      this.ngOnInit()
-    }else{
-      this.userData=this.userData.filter((result:User)=>{return result.firstName.toLowerCase().match(this.searchText.toLowerCase())})
-    }
+  getdept() {
+    this.service.getDepartment().subscribe((data) => (this.department = data));
   }
 }

@@ -1,37 +1,32 @@
-<button  class="button" routerLink="add">Add</button>
-<input type="search" placeholder="Search" [(ngModel)]="searchText" (input)="OnSearch()">
-<body>
-
-    <table class="table">
-        <thead>
-            <tr>
-                <th scope="col"  >Sr.no.</th>
-                <th scope="col"  >Name</th>
-                <th scope="col" >E-mail</th>
-                <th scope="col" >Gender</th>
-                <th scope="col" >D.O.E</th>
-                <th scope="col" >Department</th>
-                <th scope="col" >Action</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of userData; let i=index">
-                <th scope="row">{{i+1}}.</th>
-                <td>{{user.firstName+" "+user.lastName}}</td>
-                <td>{{user.email}}</td>
-                <td>{{user.gender}}</td>
-                <td>{{user.date | date: 'MM/dd/yyyy'}}</td>
-                <td>{{user.department}}</td>
-                <td>
-              <a routerLink="edit/{{user.id}}">Edit</a>
-                <button class="button" (click)="deleteUser(user.id)">Delete</button>
-            </td>
-        </tbody>
-    </table>
-
- 
-
-
-
-
-
+<button class="button" routerLink="add">Add</button>
+<input type="search" placeholder="Search" [(ngModel)]="searchText" />
+<div *ngIf="userData?.length">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Sr.no.</th>
+        <th scope="col">Name</th>
+        <th scope="col">E-mail</th>
+        <th scope="col">Gender</th>
+        <th scope="col">D.O.E</th>
+        <th scope="col">Department</th>
+        <th scope="col">Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of userData | userFilter: searchText; let i = index">
+        <th scope="row">{{ i + 1 }}.</th>
+        <td>{{ user.firstName + " " + user.lastName }}</td>
+        <td>{{ user.email }}</td>
+        <td>{{ user.gender }}</td>
+        <td>{{ user.date | date: "MM/dd/yyyy" }}</td>
+        <td>{{ user.department | departmentPipe: department }}</td>
+        <td>
+          <button class="button" routerLink="edit/{{ user.id }}">Edit</button>
+          <button class="button" (click)="deleteUser(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="!userData?.length">No Record Inserted...</div>

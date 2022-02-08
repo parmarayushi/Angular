@@ -8,6 +8,8 @@ import { ListComponent } from './list/list.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FormService } from './service/form.service';
+import { UserFilterPipe } from './pipes/user-filter.pipe';
+import { DepartmentPipePipe } from './pipes/department-pipe.pipe';
 
 
 @NgModule({
@@ -15,6 +17,8 @@ import { FormService } from './service/form.service';
     UsersComponent,
     FormComponent,
     ListComponent,
+    UserFilterPipe,
+    DepartmentPipePipe,
   ],
   imports: [
     CommonModule,

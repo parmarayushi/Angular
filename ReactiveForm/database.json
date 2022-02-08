@@ -23,23 +23,13 @@
   ],
   "form": [
     {
-      "firstName": "Aayushi",
-      "lastName": "Parmar",
-      "email": "aayushiparmar812@gmail.com",
-      "contact": "9421658732",
-      "gender": "female",
-      "date": "2022-02-21",
-      "department": "Frontend",
-      "id": 1
-    },
-    {
       "firstName": "Mrunal",
-      "lastName": "patel",
+      "lastName": "Patel",
       "email": "mrunalpatel2@gmail.com",
       "contact": "9421658732",
       "gender": "male",
       "date": "2022-02-21",
-      "department": "Database",
+      "department": "3",
       "id": 4
     },
     {
@@ -49,28 +39,18 @@
       "contact": "9421658732",
       "gender": "male",
       "date": "2022-02-25",
-      "department": "QA",
+      "department": "2",
       "id": 6
     },
     {
-      "firstName": "nirali",
+      "firstName": "Nirali",
       "lastName": "tandel",
       "email": "nirali@gmail.com",
       "contact": "1236547890",
       "gender": "female",
       "date": "2022-02-25",
-      "department": "Android",
+      "department": "4",
       "id": 7
-    },
-    {
-      "firstName": "Aayushi",
-      "lastName": "Parmar",
-      "email": "aayushiparmar812@gmail.com",
-      "contact": "1254592164",
-      "gender": "female",
-      "date": "2022-02-25",
-      "department": "Database",
-      "id": 8
     },
     {
       "firstName": "nirali",
@@ -78,9 +58,19 @@
       "email": "nirali@gmail.com",
       "contact": "9421658732",
       "gender": "female",
-      "date": "2022-02-12",
-      "department": ".NET",
+      "date": "2022-02-23",
+      "department": "1",
       "id": 9
+    },
+    {
+      "firstName": "ajaya",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "1236547890",
+      "gender": "female",
+      "date": "2022-03-02",
+      "department": "5",
+      "id": 10
     }
   ]
 }

@@ -28,12 +28,7 @@ export class FormComponent implements OnInit {
     console.log(this.registrationform);
 
     this.getDepartmentList();
-
-    if (!this.isAddMode) {
-      this.service
-        .getById(this.id)
-        .subscribe((x) => this.registrationform.patchValue(x));
-    }
+    this.getbyid();
   }
 
   registrationform = this.fb.group({
@@ -61,14 +56,13 @@ export class FormComponent implements OnInit {
     );
   }
 
-  onSubmit(){
-    if(this.isAddMode){
-      this.saveData()
-    }else{
-      this.updateUser()
+  onSubmit() {
+    if (this.isAddMode) {
+      this.saveData();
+    } else {
+      this.updateUser();
     }
   }
-
 
   saveData() {
     console.log(this.registrationform);
@@ -83,9 +77,16 @@ export class FormComponent implements OnInit {
     this.router.navigate(['reactive']);
   }
 
+  getbyid() {
+    if (!this.isAddMode) {
+      this.service
+        .getById(this.id)
+        .subscribe((x) => this.registrationform.patchValue(x));
+    }
+  }
   updateUser() {
     console.log(this.registrationform);
-    this.service.updateUser(this.id,this.registrationform.value).subscribe(
+    this.service.updateUser(this.id, this.registrationform.value).subscribe(
       (result) => {
         alert('Data Updated Successfully');
       },

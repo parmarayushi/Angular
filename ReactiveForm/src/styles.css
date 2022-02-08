@@ -11,31 +11,3 @@ body {
 }
 
 
-.wrapper{
-  height: 100%;
-}
-.d-flex {
-  display: flex;
-}
-
-.flex-grow{
-  flex-grow:1;
-}
-
-.align-item {
-  align-items: center;
-  justify-content: center;
-}
-
-.sidebar{
-  height:100%;
-  width:300px;
-}
-
-.overflow{
-  overflow: auto;
-}
-
-.margin{
-  margin:10px;
-}

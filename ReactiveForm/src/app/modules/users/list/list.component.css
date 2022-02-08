@@ -6,7 +6,7 @@ html,body{
 
 table,td,th{
     padding:5px;
-    margin:10px;
+    margin-top:10px;
     border: 1px solid black;
 }
 
