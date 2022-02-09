@@ -1,6 +1,7 @@
 h1{
     text-align: center;
 }
+
 .container{
     padding: 20px;
     margin:20px;
@@ -22,4 +23,8 @@ h1{
 
 .button{
     margin: 5px;
+}
+
+.btn-add{
+    color:blue;
 }

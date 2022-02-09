@@ -1,0 +1,131 @@
+<main>
+  <div class="wrapper" *ngIf="resume">
+    <table>
+      <tr class="border-bottom"> 
+        <td>
+          <h1>{{ resume.name }}</h1>
+          <em
+            ><h2>{{ resume.designation }}</h2></em
+          >
+        </td>
+        <td width="200px">
+          <p><button>Download PDF</button></p>
+          <p>
+            <a class="email-color">{{ resume.email }}</a>
+          </p>
+          <b>{{ resume.contact }}</b>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr class="border-bottom">
+        <td style="width: 150px">
+          <em>Profile</em>
+        </td>
+        <td>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea
+          voluptatibus animi laborum iusto atque voluptatum ex at natus et
+          quisquam consequuntur molestiae earum minus obcaecati, reprehenderit
+          eligendi nam, quis delectus.
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr class="border-bottom">
+        <td style="width: 150px">
+          <em>Skills</em>
+        </td>
+        <td style="padding: 0px; vertical-align: top">
+          <table>
+            <tr class="vertical-top">
+              <td class="vertical-top">
+                <h3>Web Design</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae aliquam possimus necessitatibus vel.
+                </p>
+              </td>
+
+              <td>
+                <h3>Interface Design</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae aliquam possimus necessitatibus vel.
+                </p>
+              </td>
+
+              <td>
+                <h3>Project Direction</h3>
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                  Recusandae aliquam possimus necessitatibus vel.
+                </p>
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr class="border-bottom">
+        <td style="width: 150px">
+          <em>Technical</em>
+        </td>
+        <td>
+          <div class="border-bottom" *ngFor="let skill of resume.skills">
+            <p>{{ skill.technicalskills }}</p>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr class="border-bottom">
+        <td style="width: 150px">
+          <em>Experience</em>
+        </td>
+        <td>
+          <table>
+            <tr
+              class="border-bottom"
+              *ngFor="let experience of resume.experience"
+            >
+              <td>
+                <h3>{{ experience.name }}</h3>
+                <p>{{ experience.post }}</p>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                  Accusamus delectus eligendi voluptates nemo eum.
+                </p>
+              </td>
+              <td style="width: 20%; vertical-align: top">
+                {{ experience.year }}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+
+    <table>
+      <tr class="border-bottom">
+        <td style="width: 150px">
+          <em>Eduction</em>
+        </td>
+        <td *ngFor="let education of resume.education">
+          <h3>{{ education.university }}</h3>
+          <p>Dual Major -{{ education.cgpa }}</p>
+        </td>
+      </tr>
+    </table>
+
+    <h4 style="text-align: center">
+      {{resume.name}} -
+      <a class="email-color">{{resume.email}}</a>
+      - {{resume.contact}}
+    </h4>
+  </div>
+</main>

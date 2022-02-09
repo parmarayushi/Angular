@@ -42,7 +42,7 @@ export class FormComponent implements OnInit {
   });
 
   get getvalue() {
-    return this.registrationform['controls'];
+    return this.registrationform.controls;
   }
 
   getDepartmentList() {

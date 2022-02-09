@@ -1,0 +1,42 @@
+* {
+    font-family: source serif pro;
+  }
+
+  table,
+  td {
+    border-collapse: collapse;
+    padding: 10px;
+    vertical-align: top;
+  }
+
+  main{
+      height:100%
+  }
+  .wrapper{
+    height:100%;
+    background-color: rgb(213, 214, 212);
+    padding: 20px;
+    max-width: 900px;
+    margin: auto;
+    border-top: 4px solid black;
+    border-bottom: 4px solid black;
+  }
+
+ table{
+      width: 100%;
+  }
+
+  .border-bottom{
+      border-bottom: 1px solid black;
+  }
+
+  a{
+      text-decoration: none;
+  }
+  .email-color{
+      color:red;
+  }
+
+  .vertical-top{
+      vertical-align: top;
+  }

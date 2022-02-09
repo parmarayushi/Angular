@@ -1,13 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
-import { Observable, Subject } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Department, User } from '../model/form.model';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FormService {
+  [x: string]: any;
   apiLink: string;
 
   constructor(private http: HttpClient) {
