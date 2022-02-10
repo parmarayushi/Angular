@@ -1,11 +1,11 @@
-h1{
+h3{
     text-align: center;
 }
 
 .container{
     padding: 20px;
     margin:20px;
-    background-color: rgb(226, 222, 222);
+    background-color: white;
     line-height: 1.5;
 }
 

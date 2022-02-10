@@ -18,7 +18,7 @@ export interface Resume{
     designation:string;
     email:string;
     contact:number;
-    skills:Skills[];
+    technicalskills:Skills[];
     experience:Experience[];
     education:Education[]
 }

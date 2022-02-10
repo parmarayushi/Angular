@@ -1,4 +1,4 @@
-<h1>Registration Form</h1>
+<h2>Registration Form</h2>
 <form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
   <div class="container">
     <div>
@@ -142,16 +142,20 @@
       </select>
     </div>
 
-    <div>
-      <button
-        class="button"
+    <div class="d-flex space-between">
+      <div>
+        <button
+        class="btn"
         type="submit"
         [disabled]="registrationform.invalid"
-        routerLink="submit"
-      >
-        Submit
-      </button>
-      <button class="button" type="reset">Reset</button>
+        >
+        Save
+        </button>
+        <button class="btn" type="reset">Reset</button>
+      </div>
+      <div>
+        <button class="btn" routerLink="/reactive/cancel">Cancel</button>
+      </div>
     </div>
   </div>
 </form>

@@ -9,6 +9,7 @@ const routes: Routes = [
     children:[
       {path:'',component:ListComponent},
       {path:'add',component:FormComponent},
+      {path:'cancel',component:ListComponent},
       {path:'edit/:id',component:FormComponent}
     ]
   }

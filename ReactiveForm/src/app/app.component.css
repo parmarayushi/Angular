@@ -1,11 +1,12 @@
 .wrapper{
-    height:  calc(100% - 50px);
-  }
+    height:  100%;
+}
+
   .d-flex {
     display: flex;
   }
   
-  .flex-grow{
+  .flex-grow-1{
     flex-grow:1;
   }
   
@@ -19,11 +20,19 @@
     width:300px;
   }
   
-  .overflow{
+  .overflow-auto{
     overflow: auto;
   }
+
+  .overflow-hidden{
+    overflow: hidden;
+  }
   
-  .margin{
+  /* .margin-10{
     margin:10px;
+  } */
+
+  .background-color{
+    background-color: #ececee
   }
   

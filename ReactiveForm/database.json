@@ -76,25 +76,37 @@
   "resume": [
     {
       "name": "Aayushi Parmar",
-      "designation": "af",
+      "designation": "fse",
       "email": "aayushiparmar812@gmail.com",
-      "contact": "xsf",
-      "skills": [
+      "contact": "6658431",
+      "technicalskills": [
         {
-          "technicalskills": "fdtdr"
+          "technicalskills": "xcv"
+        },
+        {
+          "technicalskills": "cxv"
+        },
+        {
+          "technicalskills": "vxx"
+        },
+        {
+          "technicalskills": "cxvx"
+        },
+        {
+          "technicalskills": "xvfx"
         }
       ],
       "experience": [
         {
-          "name": "asf",
-          "year": "afs",
-          "post": "saf"
+          "name": "sdf",
+          "year": "ds",
+          "post": "sddsf"
         }
       ],
       "education": [
         {
-          "university": "saf",
-          "cgpa": "safafa"
+          "university": "sdf",
+          "cgpa": "7.2"
         }
       ],
       "id": 1
