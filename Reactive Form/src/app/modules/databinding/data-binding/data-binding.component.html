@@ -1,0 +1,29 @@
+<h2>Data Binding</h2>
+
+<div>
+<h3 class="title">Interpolation Binding</h3>
+
+<!-- Start: interpolation-->
+<h4 class="padding-10">NAME:{{ name }}</h4>
+<!--End: interpolation-->
+
+<h3 class="title">Property Binding</h3>
+<!--Start:Property binding-->
+<img [src]="imgUrl" class="padding-10"/><br />
+<!--End:Propert binding-->
+
+<h3 class="title">Event Binding</h3>
+<!--Start:evnet binding-->
+<button (click)="onClick()" class="margin-10">Submit</button><br />   
+<!--End:event binding-->
+
+<h3 class="title">Two-way Binding</h3>
+<!--Strat:ngModel(two way binding)-->
+<input type="text" [(ngModel)]="data" class="margin-10"/><br />
+<h4 class="margin-10">{{ data }}</h4>
+<!--End:ngModel(two way binding)-->
+
+<h3 class="title" >Component Connection</h3>
+<app-parent></app-parent>
+
+</div>

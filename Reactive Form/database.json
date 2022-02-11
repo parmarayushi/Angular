@@ -1,0 +1,125 @@
+{
+  "department": [
+    {
+      "id": 1,
+      "name": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "QA"
+    },
+    {
+      "id": 3,
+      "name": "Database"
+    },
+    {
+      "id": 4,
+      "name": ".NET"
+    },
+    {
+      "id": 5,
+      "name": "Android"
+    }
+  ],
+  "form": [
+    {
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "9421658732",
+      "gender": "female",
+      "date": "2022-02-16",
+      "department": "1",
+      "id": 1
+    },
+    {
+      "firstName": "nirali",
+      "lastName": "tandel",
+      "email": "nirali@gmail.com",
+      "contact": "6548216826",
+      "gender": "female",
+      "date": "2022-03-10",
+      "department": "3",
+      "id": 2
+    },
+    {
+      "firstName": "Yash",
+      "lastName": "parmar",
+      "email": "yashp@gmail.com",
+      "contact": "1236547890",
+      "gender": "male",
+      "date": "2021-08-10",
+      "department": "2",
+      "id": 3
+    },
+    {
+      "firstName": "mrunal",
+      "lastName": "patel",
+      "email": "mrunalpatel2@gmail.com",
+      "contact": "9254592164",
+      "gender": "male",
+      "date": "2022-02-27",
+      "department": "4",
+      "id": 4
+    },
+    {
+      "firstName": "ajaya",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "8642165975",
+      "gender": "male",
+      "date": "2021-06-16",
+      "department": "5",
+      "id": 5
+    },
+    {
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "9421658732",
+      "gender": "female",
+      "date": "2021-06-15",
+      "department": "3",
+      "id": 6
+    }
+  ],
+  "resume": [
+    {
+      "name": "Aayushi Parmar",
+      "designation": "FrontendDeveloper",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "9403260256",
+      "technicalskills": [
+        {
+          "technicalskills": "HTML"
+        },
+        {
+          "technicalskills": "CSS"
+        },
+        {
+          "technicalskills": "Javascript"
+        },
+        {
+          "technicalskills": "Angular"
+        },
+        {
+          "technicalskills": "Wordpress"
+        }
+      ],
+      "experience": [
+        {
+          "name": "Facebook",
+          "year": "2015-2018",
+          "post": "Senior Interface Designer"
+        }
+      ],
+      "education": [
+        {
+          "university": "Vnsgu",
+          "cgpa": "7.5"
+        }
+      ],
+      "id": 1
+    }
+  ]
+}

@@ -1,0 +1,23 @@
+
+.container{
+    padding: 20px;
+    margin:20px;
+    background-color: rgb(226, 222, 222);
+    line-height: 1.5;
+}
+
+.text-box{
+    width:50%;
+}
+
+.text-area{
+    height: 50px;
+    resize: none;
+}
+.text-danger{
+    color:red;
+}
+
+.button{
+    margin: 5px;
+}
