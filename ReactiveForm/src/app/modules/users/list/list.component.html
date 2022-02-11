@@ -1,18 +1,18 @@
 <h2>Form List</h2>
-<header>
-  <div class="search">
-      <span><input type="text"  placeholder="Search..." class="search-bar" [(ngModel)]="searchText"/></span>
-      <span class="icon-search search-icon"></span>     
-  </div>
-  <div>
-      <button input type="button" class="btn-adduser" routerLink="/reactive/add">Add User</button>
-  </div>
-</header>
 <!-- <div>
   <input type="search" placeholder="Search" [(ngModel)]="searchText" />
   <button class="button" routerLink="add">Add</button>
 </div> -->
 <div *ngIf="userData?.length">
+  <div class="wrapper">
+    <div class="search">
+        <span><input type="text"  placeholder="Search..." class="search-bar" [(ngModel)]="searchText"/></span>
+        <span class="icon-search search-icon"></span>     
+    </div>
+    <div>
+        <button input type="button" class="btn-adduser" routerLink="/reactive/add">+ Add User</button>
+    </div>
+  </div>
   <table>
     <thead>
       <tr>

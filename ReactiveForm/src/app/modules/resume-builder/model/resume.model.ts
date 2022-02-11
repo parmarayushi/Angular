@@ -1,19 +1,19 @@
-interface Skills{
+class Skills{
     technicalskills:string;
 }
 
-interface Experience{
+class Experience{
     name:string;
     year:number;
     post:string
 }
 
-interface Education{
+class Education{
     university:string;
     cgpa:number;
 }
 
-export interface Resume{
+export class Resume{
     name:string;
     designation:string;
     email:string;

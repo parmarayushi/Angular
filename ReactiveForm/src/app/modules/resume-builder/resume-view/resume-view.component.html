@@ -1,14 +1,14 @@
 <main>
   <div class="wrapper" *ngIf="resume">
     <table>
-      <tr class="border-bottom"> 
+      <tr class="border-bottom">
         <td>
           <h1>{{ resume.name }}</h1>
           <em
             ><h2>{{ resume.designation }}</h2></em
           >
         </td>
-        <td width="200px">
+        <td class="width-200">
           <p><button>Download PDF</button></p>
           <p>
             <a class="email-color">{{ resume.email }}</a>
@@ -20,7 +20,7 @@
 
     <table>
       <tr class="border-bottom">
-        <td style="width: 150px">
+        <td class="width-150">
           <em>Profile</em>
         </td>
         <td>
@@ -34,7 +34,7 @@
 
     <table>
       <tr class="border-bottom">
-        <td style="width: 150px">
+        <td class="width-150">
           <em>Skills</em>
         </td>
         <td style="padding: 0px; vertical-align: top">
@@ -71,28 +71,29 @@
 
     <table>
       <tr class="border-bottom">
-        <td style="width: 150px">
+        <td class="width-150">
           <em>Technical</em>
         </td>
         <td>
-          <div class="border-bottom" *ngFor="let skill of resume.technicalskills">
-            <p>{{ skill.technicalskills }}</p>
-          </div>
+          <table>
+            <tr class="d-flex flex-wrap">
+              <td *ngFor="let skill of resume.technicalskills" class="width-33">
+                <p>{{ skill.technicalskills }}</p>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
 
     <table>
       <tr class="border-bottom">
-        <td style="width: 150px">
+        <td class="width-150">
           <em>Experience</em>
         </td>
         <td>
           <table>
-            <tr
-              class="border-bottom"
-              *ngFor="let experience of resume.experience"
-            >
+            <tr *ngFor="let experience of resume.experience">
               <td>
                 <h3>{{ experience.name }}</h3>
                 <p>{{ experience.post }}</p>
@@ -112,7 +113,7 @@
 
     <table>
       <tr class="border-bottom">
-        <td style="width: 150px">
+        <td class="width-150">
           <em>Eduction</em>
         </td>
         <td *ngFor="let education of resume.education">
@@ -122,10 +123,10 @@
       </tr>
     </table>
 
-    <h4 style="text-align: center">
-      {{resume.name}} -
-      <a class="email-color">{{resume.email}}</a>
-      - {{resume.contact}}
+    <h4 class="text-center">
+      {{ resume.name }} -
+      <a class="email-color">{{ resume.email }}</a>
+      - {{ resume.contact }}
     </h4>
   </div>
 </main>

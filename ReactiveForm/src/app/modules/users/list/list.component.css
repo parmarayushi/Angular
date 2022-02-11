@@ -21,7 +21,16 @@ table,tr{
 }
 
 td,th{
+    padding:10px;
     text-align: center;
+}
+
+th{
+    color:#dadade;
+}
+
+td{
+    color:#767676;
 }
 
 h2{
@@ -36,12 +45,12 @@ h2{
 .btn-adduser{
     width:160px;
     height:40px;
-    background-color: blue;
+    background-color: #2f55e4;
     color: white;
     border-radius: 10px;
 }
 
-header {
+.wrapper {
     display: flex;
     justify-content: space-between;
     flex-shrink: 0;

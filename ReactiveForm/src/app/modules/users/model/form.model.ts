@@ -1,9 +1,9 @@
-export interface Department{
+export class Department{
     id:number;
     name:string;
 }
 
-export interface User{
+export class User{
     id:number;
     firstName:string;
     lastName:string;

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router} from '@angular/router';
+import { Router } from '@angular/router';
 import { ResumeService } from '../services/resume.service';
 
 @Component({
@@ -12,12 +12,12 @@ export class ResumeFormComponent implements OnInit {
   constructor(
     private fb: FormBuilder,
     public service: ResumeService,
-    private route :Router
+    private route: Router
   ) {}
 
   ngOnInit(): void {}
 
-  resume = this.fb.group({
+  resumeBuilder = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(3)]],
     designation: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
@@ -28,7 +28,7 @@ export class ResumeFormComponent implements OnInit {
   });
 
   get getvalue() {
-    return this.resume.controls;
+    return this.resumeBuilder.controls;
   }
 
   //Technical Skills
@@ -101,16 +101,14 @@ export class ResumeFormComponent implements OnInit {
   }
 
   onSubmit() {
-    this.service.deleteData(1).subscribe(()=>{
-      this.service.saveData(this.resume.value).subscribe();
-    })
+    this.service.deleteData(1).subscribe(() => {
+      this.service.saveData(this.resumeBuilder.value).subscribe();
+    });
     this.route.navigate(['/resume/review']);
-    console.log(this.resume.value);
-
-    
+    console.log(this.resumeBuilder.value);
   }
 
   resetForm() {
-    this.resume.reset();
+    this.resumeBuilder.reset();
   }
 }
