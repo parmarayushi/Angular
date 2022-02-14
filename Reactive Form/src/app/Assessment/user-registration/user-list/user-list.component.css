@@ -1,0 +1,30 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+table,
+tr {
+  padding: 5px;
+  border: 1px solid rgb(179, 177, 177);
+  border-collapse: collapse;
+  margin: 10px 10px 0 20px;
+  width: 97%;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: white;
+}
+
+th {
+  background-color: #ececee;
+  height: 40px;
+  text-align: center;
+}
+
+td {
+  height: 40px;
+  text-align: center;
+  background-color: white;
+}

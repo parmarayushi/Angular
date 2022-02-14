@@ -8,6 +8,7 @@ const routes: Routes = [
   {path:'databinding',loadChildren:()=>import('./modules/databinding/databinding.module').then(m=>m.DatabindingModule)},
   {path:'reactive',loadChildren:()=>import('./modules/users/users.module').then(m=>m.UsersModule)},
   {path:'resume',loadChildren:()=>import('./modules/resume-builder/resume-builder.module').then(m=>m.ResumeBuilderModule)},
+  {path:'user',loadChildren:()=>import('./Assessment/user-registration/user-registration.module').then(m=>m.UserRegistrationModule)},
 
 ];
 

@@ -8,7 +8,6 @@ import { Department, User } from '../model/form.model';
   providedIn: 'root',
 })
 export class FormService {
-  [x: string]: any;
   apiLink: string;
 
   constructor(private http: HttpClient) {
