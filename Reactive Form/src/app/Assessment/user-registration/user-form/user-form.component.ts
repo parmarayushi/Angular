@@ -13,12 +13,14 @@ export class UserFormComponent implements OnInit {
   userData: UserRegistration[];
   clientData: Client[];
   officeData: Office[];
-  searchText: 'string';
+  searchText: string;
+  sortclient:number;
   id: number;
   isAddMode?: boolean;
   showForm: boolean = false;
   buttonDisabled: boolean = false;
   submitted: boolean = false;
+  
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
@@ -40,8 +42,8 @@ export class UserFormComponent implements OnInit {
     lastName: ['', Validators.required],
     email: ['', [Validators.required, Validators.email]],
     contact: ['', [Validators.required, Validators.maxLength(10)]],
-    client: [''],
-    office: [''],
+    client: ['',Validators.required],
+    office: ['',Validators.required],
   });
 
   get getvalue() {
@@ -109,7 +111,10 @@ export class UserFormComponent implements OnInit {
   onSubmit() {
     this.submitted = true;
     if (this.isAddMode) {
-      this.saveData();
+      if(this.userregistration.valid){
+        this.saveData();
+      }
+     
     } else {
       this.updateUser();
     }

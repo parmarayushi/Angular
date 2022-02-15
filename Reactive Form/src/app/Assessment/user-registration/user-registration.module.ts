@@ -11,6 +11,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchPipe } from './pipes/search.pipe';
 import { ClientPipe } from './pipes/client.pipe';
 import { OfficePipe } from './pipes/office.pipe';
+import { SortclientPipe } from './pipes/sortclient.pipe';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { OfficePipe } from './pipes/office.pipe';
     SearchPipe,
     ClientPipe,
     OfficePipe,
+    SortclientPipe,
   ],
   imports: [
     CommonModule,

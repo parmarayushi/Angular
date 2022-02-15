@@ -1,4 +1,4 @@
-<div *ngIf="userData?.length">
+
   <table>
     <thead>
       <tr>
@@ -11,7 +11,7 @@
         <th scope="col">Action</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody  *ngIf="userData?.length">
       <tr *ngFor="let user of userData">
         <td>{{ user.firstName }}</td>
         <td>{{ user.lastName }}</td>
@@ -26,5 +26,5 @@
       </tr>
     </tbody>
   </table>
-</div>
+
 <div *ngIf="!userData?.length">No Record Inserted..</div>

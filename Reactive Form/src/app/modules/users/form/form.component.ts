@@ -38,7 +38,7 @@ export class FormComponent implements OnInit {
     contact: ['', Validators.required],
     gender: [''],
     date: [''],
-    department: [''],
+    department: ['',Validators.required],
   });
 
   get getvalue() {

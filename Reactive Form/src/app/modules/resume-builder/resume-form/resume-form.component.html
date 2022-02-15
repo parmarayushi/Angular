@@ -10,20 +10,20 @@
         class="text-box"
       />
       <div *ngIf="getvalue['name'].touched && getvalue['name'].invalid">
-        <div
+        <small
           class="text-danger"
           *ngIf="getvalue['name'].errors && getvalue['name'].errors['required']"
         >
           *name is required
-        </div>
-        <div
+        </small>
+        <small
           class="text-danger"
           *ngIf="
             getvalue['name'].errors && getvalue['name'].errors['minlength']
           "
         >
           *minimum length should be 3
-        </div>
+        </small>
       </div>
     </div>
     <div>
@@ -39,7 +39,7 @@
           getvalue['designation'].touched && getvalue['designation'].invalid
         "
       >
-        <div
+        <small
           class="text-danger"
           *ngIf="
             getvalue['designation'].errors &&
@@ -47,8 +47,8 @@
           "
         >
           *designation is required
-        </div>
-        <div
+        </small>
+        <small
           class="text-danger"
           *ngIf="
             getvalue['designation'].errors &&
@@ -56,7 +56,7 @@
           "
         >
           *minimum length should be 3
-        </div>
+        </small>
       </div>
 
       <div>
@@ -68,22 +68,22 @@
           class="text-box"
         />
         <div *ngIf="getvalue['email'].touched && getvalue['email'].invalid">
-          <div
+          <small
             class="text-danger"
             *ngIf="
               getvalue['email'].errors && getvalue['email'].errors['required']
             "
           >
             *email is required
-          </div>
-          <div
+          </small>
+          <small
             class="text-danger"
             *ngIf="
               getvalue['email'].errors && getvalue['email'].errors['email']
             "
           >
             *enter proper format
-          </div>
+          </small>
         </div>
       </div>
 
@@ -97,7 +97,7 @@
           class="text-box"
         />
         <div *ngIf="getvalue['contact'].touched && getvalue['contact'].invalid">
-          <div
+          <small
             class="text-danger"
             *ngIf="
               getvalue['contact'].errors &&
@@ -105,8 +105,8 @@
             "
           >
             *contact is required
-          </div>
-          <div
+          </small>
+          <small
             class="text-danger"
             *ngIf="
               getvalue['contact'].errors &&
@@ -114,7 +114,7 @@
             "
           >
             *maxlength should be 10
-          </div>
+          </small>
         </div>
       </div>
 
@@ -134,7 +134,7 @@
               formControlName="technicalskills"
               placeholder="Technical Skills"
             />
-            <div
+            <small
               class="text-danger"
               *ngIf="
                 technicalskill.controls[i].get('technicalskills')?.touched &&
@@ -142,7 +142,7 @@
               "
             >
               *technical skills required
-            </div>
+            </small>
             <button class="text-danger" type="button" (click)="deleteSkills(i)">
               Delete
             </button>
@@ -166,7 +166,7 @@
               formControlName="name"
               placeholder="Experience Name"
             /><br />
-            <div
+            <small
               class="text-danger"
               *ngIf="
                 experience.controls[i].get('name')?.touched &&
@@ -174,13 +174,13 @@
               "
             >
               *experience name is required
-            </div>
+            </small>
             <input
               type="text"
               formControlName="year"
               placeholder="Experience Year"
             /><br />
-            <div
+            <small
               class="text-danger"
               *ngIf="
                 experience.controls[i].get('year')?.touched &&
@@ -188,13 +188,13 @@
               "
             >
               *experience year is required
-            </div>
+            </small>
             <input
               type="text"
               formControlName="post"
               placeholder="Experience Post"
             />
-            <div
+            <small
               class="text-danger"
               *ngIf="
                 experience.controls[i].get('post')?.touched &&
@@ -202,7 +202,7 @@
               "
             >
               *experience post is required
-            </div>
+            </small>
             <button
               class="text-danger"
               type="button"
@@ -230,7 +230,7 @@
               formControlName="university"
               placeholder="Enter University"
             /><br />
-            <div
+            <small
               class="text-danger"
               *ngIf="
                 education.get('university')?.touched &&
@@ -238,20 +238,20 @@
               "
             >
               *university is required
-            </div>
+            </small>
             <input
               type="text"
               formControlName="cgpa"
               placeholder="Enter CGPA"
             />
-            <div
+            <small
               class="text-danger"
               *ngIf="
                 education.get('cgpa')?.touched && education.get('cgpa')?.invalid
               "
             >
               *cgpa is required
-            </div>
+            </small>
             <button
               class="text-danger"
               type="button"

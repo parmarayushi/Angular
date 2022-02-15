@@ -124,58 +124,31 @@
   ],
   "users": [
     {
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "8345678956",
+      "client": "3",
+      "office": "3",
+      "id": 1
+    },
+    {
+      "firstName": "Mrunal",
+      "lastName": "Patel",
+      "email": "mrunal@gmail.com",
+      "contact": "7512452362",
+      "client": "2",
+      "office": "2",
+      "id": 2
+    },
+    {
       "firstName": "nirali",
       "lastName": "tandel",
       "email": "nirali@gmail.com",
       "contact": "7345678956",
       "client": "1",
       "office": "1",
-      "id": 2
-    },
-    {
-      "firstName": "Aayushi",
-      "lastName": "Parmar",
-      "email": "aayushiparmar812@gmail.com",
-      "contact": "2345678956",
-      "client": "2",
-      "office": "1",
       "id": 3
-    },
-    {
-      "firstName": "Yash",
-      "lastName": "Parmar",
-      "email": "yash@gmail.com",
-      "contact": "7412512512",
-      "client": "2",
-      "office": "1",
-      "id": 4
-    },
-    {
-      "firstName": "mrunal",
-      "lastName": "Parmar",
-      "email": "mrunalpatel@gmail.com",
-      "contact": "8412514524",
-      "client": "3",
-      "office": "1",
-      "id": 5
-    },
-    {
-      "firstName": "Aayushi",
-      "lastName": "Parmar",
-      "email": "aayushiparmar812@gmail.com",
-      "contact": "8345678956",
-      "client": "3",
-      "office": "1",
-      "id": 6
-    },
-    {
-      "firstName": "",
-      "lastName": "",
-      "email": "",
-      "contact": "",
-      "client": "",
-      "office": "",
-      "id": 7
     }
   ],
   "client": [
@@ -198,11 +171,11 @@
       "officename": "Office1"
     },
     {
-      "id": 1,
+      "id": 2,
       "officename": "Office2"
     },
     {
-      "id": 1,
+      "id": 3,
       "officename": "Office3"
     }
   ]
