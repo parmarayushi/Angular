@@ -1,55 +1,66 @@
+<input type="checkbox" id="menu" checked />
 <aside>
-  <div class="header">
-    <span class="icon-angular"></span>
-    <span class="color">ANGULAR</span>
+  <header class="d-flex">
+    <label for="menu"><span class="icon-menu menu-btn"></span></label>
+    <div class="flex-grow-1">
+      <span class="icon-angular menu-btn logo"></span>
+    </div>
+  </header>
+  <div class="d-flex profile">
+    <img src="assets/images/sunflower.jpg" class="avatar" />
+    <div class="profile-detail logo white-space">
+      <p class="username">Aayushi Parmar</p>
+      <p class="email">aayushiparmar812@gmail.com</p>
+    </div>
   </div>
-  <nav class="overflow-auto">
-    <ul>
+  <nav class="overflow-auto nav-bar">
+    <ul class="border-bottom">
       <li>
-        <a routerLink="angularbasics" class="icon d-flex align-item-center">
-          <span class="icon-grid icon-padding"></span>
-          Angular Basics
+        <a routerLink="angularbasics" routerLinkActive="active" class="d-flex">
+          <span class="icon-grid"></span>
+          <span class="logo icon-margin">Angular Basics</span>
         </a>
       </li>
 
       <li>
-        <a routerLink="directivepipes"  class="icon d-flex align-item-center">
-          <span class="icon-enter icon-padding"></span>
-          Directive-Pipes
+        <a routerLink="directivepipes" routerLinkActive="active" class="d-flex">
+          <span class="icon-enter"></span>
+          <span class="logo icon-margin">Directive-Pipes</span>
         </a>
       </li>
 
       <li>
-        <a routerLink="databinding" class="icon d-flex align-item-center">
-          <span class="icon-compare_arrows icon-padding"></span>
-          <span>Data Binding</span>
+        <a routerLink="databinding" routerLinkActive="active" class="d-flex">
+          <span class="icon-compare_arrows"></span>
+          <span class="logo icon-margin">Data Binding</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="border-top border-bottom">
+      <li>
+        <a routerLink="reactive" routerLinkActive="active" class="d-flex">
+          <span class="icon-calendar"></span>
+          <span class="logo icon-margin">Reactive Form</span>
         </a>
       </li>
 
       <li>
-        <a routerLink="reactive" class="icon d-flex align-item-center">
-          <span class="icon-calendar icon-padding"></span>
-          <span>Reactive Form</span>
+        <a routerLink="resume" routerLinkActive="active" class="d-flex">
+          <span class="icon-profile"></span>
+          <span class="logo icon-margin">Resume Builder</span>
         </a>
       </li>
 
       <li>
-        <a routerLink="resume" class="icon d-flex align-item-center">
-          <span class="icon-profile icon-padding"></span>
-          <span>Resume Builder</span>
-        </a>
-      </li>
-
-      <li>
-        <a routerLink="user" class="icon d-flex align-item-center">
-          <span class="icon-grid icon-padding"></span>
-          <span>Users</span>
+        <a routerLink="user" routerLinkActive="active" class="d-flex">
+          <span class="icon-grid"></span>
+          <span class="logo icon-margin">Users</span>
         </a>
       </li>
     </ul>
   </nav>
-  <div class="logout icon d-flex align-item-center">
-    <span class="icon-exit icon-padding"></span>
-    <div>LogOut</div>
+  <div class="logout d-flex justify-content-center">
+    <span class="icon-exit"></span>
+    <span class="logo icon-margin">LogOut</span>
   </div>
 </aside>

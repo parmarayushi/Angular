@@ -1,34 +1,12 @@
-.wrapper{
-    height:  100%;
+.wrapper {
+  height: 100%;
 }
 
-  .d-flex {
-    display: flex;
-  }
-  
-  .flex-grow-1{
-    flex-grow:1;
-  }
-  
-  .align-item {
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .sidebar{
-    height:100%;
-    width:300px;
-  }
-  
-  .overflow-auto{
-    overflow: auto;
-  }
+.sidebar {
+  height: 100%;
+}
 
-  .overflow-hidden{
-    overflow: hidden;
-  }
+.background-color {
+  background-color: #ececee;
+}
 
-  .background-color{
-    background-color: #ececee
-  }
-  

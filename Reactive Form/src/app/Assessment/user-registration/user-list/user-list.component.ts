@@ -12,6 +12,8 @@ export class UserListComponent implements OnInit {
   client: Client[];
   office: Office[];
   searchText: string = '';
+  showForm: boolean = false;
+  buttonDisabled: boolean = false;
   constructor(private service: UsersService) {}
 
   ngOnInit(): void {
@@ -41,6 +43,11 @@ export class UserListComponent implements OnInit {
         alert('Something Went Wrong');
       }
     );
+  }
+  
+  toggleForm() {
+    this.showForm = !this.showForm;
+    this.buttonDisabled = false;
   }
 
   getclient() {

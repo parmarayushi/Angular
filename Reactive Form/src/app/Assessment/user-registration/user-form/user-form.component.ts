@@ -18,7 +18,7 @@ export class UserFormComponent implements OnInit {
   id: number;
   isAddMode?: boolean;
   showForm: boolean = false;
-  buttonDisabled: boolean = false;
+  // buttonDisabled: boolean = false;
   submitted: boolean = false;
   
   constructor(
@@ -91,6 +91,7 @@ export class UserFormComponent implements OnInit {
         .subscribe((x) => this.userregistration.patchValue(x));
     }
   }
+  
   updateUser() {
     console.log(this.userregistration);
     this.service.updateUser(this.id, this.userregistration.value).subscribe(
@@ -105,7 +106,7 @@ export class UserFormComponent implements OnInit {
 
   toggleForm() {
     this.showForm = !this.showForm;
-    this.buttonDisabled = false;
+    // this.buttonDisabled = true;
   }
 
   onSubmit() {

@@ -1,3 +1,7 @@
+h2 {
+  font-weight: 400;
+}
+
 .header {
   margin: 20px;
   display: flex;
@@ -15,11 +19,11 @@
   border: #f1f1f3;
 }
 
-.client-sort{
+.client-sort {
   height: 40px;
   width: 160px;
   border-radius: 5px;
-  margin-right:10px;
+  margin-right: 10px;
 }
 
 .btn-newuser {
@@ -29,14 +33,6 @@
   background-color: #2f6bff;
   color: white;
   border-radius: 5px;
-}
-
-.d-flex {
-  display: flex;
-}
-
-.direction-col {
-  flex-direction: column;
 }
 
 .container {
@@ -81,10 +77,6 @@
   color: white;
   border-radius: 5px;
   margin: 5px;
-}
-
-.justify-content {
-  justify-content: right;
 }
 
 .margin-top-40 {

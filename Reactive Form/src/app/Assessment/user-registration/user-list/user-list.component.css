@@ -17,14 +17,46 @@ tr {
   background-color: white;
 }
 
+th,td{
+  padding: 10px;
+  text-align: left;
+}
 th {
-  background-color: #ececee;
-  height: 40px;
-  text-align: center;
+  color: #dadade;
+  font-weight: 400;
+ 
 }
 
 td {
-  height: 40px;
-  text-align: center;
-  background-color: white;
+  color: #767676;
+  font-size: 16px;
+  padding: 10px;
 }
+
+.btn-edit {
+  width: 60px;
+  height: 24px;
+  background-color: #5371df;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.btn-delete {
+  width: 60px;
+  height: 24px;
+  background-color:rgb(245, 119, 119);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.button {
+  margin: 5px;
+  width: 50px;
+}
+
+.padding-left{
+  padding-left: 30px;
+}
+
