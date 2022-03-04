@@ -114,15 +114,6 @@
   ],
   "users": [
     {
-      "firstName": "Aayushi",
-      "lastName": "Parmar",
-      "email": "aayushiparmar812@gmail.com",
-      "contact": "8345678956",
-      "client": "3",
-      "office": "3",
-      "id": 1
-    },
-    {
       "firstName": "Mrunal",
       "lastName": "Patel",
       "email": "mrunal@gmail.com",

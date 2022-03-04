@@ -1,6 +1,8 @@
+<div class="form-wrapper">
 <h2>Registration Form</h2>
+<div class="container">
 <form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
-  <div class="container">
+ 
     <div>
       <label for="firstName">First Name: </label><br />
       <input
@@ -178,7 +180,8 @@
         <button class="btn" routerLink="/reactive/cancel">Cancel</button>
       </div>
     </div>
-  </div>
 </form>
+</div>
+</div>
 
 <!-- {{registrationform.value|json}} -->

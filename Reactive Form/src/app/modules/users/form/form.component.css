@@ -4,6 +4,8 @@
   width: 800px;
   background-color: white;
   line-height: 1.5;
+  overflow: scroll;
+  height: 50%;
 }
 
 h2 {
@@ -36,4 +38,28 @@ h2 {
   color: white;
   border-radius: 10px;
   margin-top: 20px;
+}
+
+.form-wrapper{
+  height: 100%;
+  overflow: hidden;
+}
+@media (max-width:768px){
+
+  .container{
+    padding: 20px;
+    height: 60%;
+    margin: 20px auto;
+    width: 600px;
+    overflow: scroll;
+  }
+
+  .btn {
+    width: 50px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 20px;
+  }
+  
+  
 }
