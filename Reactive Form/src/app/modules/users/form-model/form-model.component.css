@@ -1,73 +1,69 @@
-.model-wrapper{
-    width: 500px;
-    height: 100%;
-    background-color: white;
-    padding: 20px;
+.model-wrapper {
+  width: 500px;
+  height: 100%;
+  background-color: white;
+  padding: 20px;
 }
 
 .model-body {
+  padding: 20px;
+  margin: 0 auto;
+  width: 500px;
+  background-color: white;
+  line-height: 1.5;
+  overflow: scroll;
+  height: 80%;
+}
+
+h2 {
+  padding: 20px 0 0 20px;
+  font-weight: 400;
+}
+.text-box {
+  width: 50%;
+}
+
+.text-area {
+  height: 50px;
+  resize: none;
+}
+.text-danger {
+  color: red;
+}
+.padding-right {
+  padding-right: 10px;
+}
+
+.button {
+  margin: 5px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  background-color: #2f55e4;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.form-wrapper {
+  height: 100%;
+  overflow: hidden;
+}
+@media (max-width: 768px) {
+  .container {
     padding: 20px;
-    margin: 0 auto;
-    width: 500px;
-    background-color: white;
-    line-height: 1.5;
+    height: 60%;
+    margin: 20px auto;
+    width: 600px;
     overflow: scroll;
-    height: 50%;
   }
-  
-  h2 {
-    padding: 20px 0 0 20px;
-    font-weight: 400;
-  }
-  .text-box {
-    width: 50%;
-  }
-  
-  .text-area {
-    height: 50px;
-    resize: none;
-  }
-  .text-danger {
-    color: red;
-  }
-  .padding-right {
-    padding-right: 10px;
-  }
-  
-  .button {
-    margin: 5px;
-  }
-  
+
   .btn {
-    width: 100px;
-    height: 40px;
-    background-color: #2f55e4;
-    color: white;
+    width: 50px;
+    height: 30px;
     border-radius: 10px;
     margin-top: 20px;
   }
-  
-  .form-wrapper{
-    height: 100%;
-    overflow: hidden;
-  }
-  @media (max-width:768px){
-  
-    .container{
-      padding: 20px;
-      height: 60%;
-      margin: 20px auto;
-      width: 600px;
-      overflow: scroll;
-    }
-  
-    .btn {
-      width: 50px;
-      height: 30px;
-      border-radius: 10px;
-      margin-top: 20px;
-    }
-    
-    
-  }
-  
+}
