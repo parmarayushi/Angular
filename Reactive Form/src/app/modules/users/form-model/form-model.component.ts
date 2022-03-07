@@ -32,7 +32,7 @@ export class FormModelComponent implements OnInit {
   ngOnInit(): void {
     // this.id = this.route.snapshot.params['id'];
     // this.isAddMode = !this.id;
-    console.log(this.registrationform);
+    // console.log(this.registrationform);
 
     // this.getDepartmentList();
     // this.getbyid();

@@ -29,7 +29,7 @@
       "contact": "9421658732",
       "gender": "female",
       "date": "2022-02-16",
-      "department": "3",
+      "department": "1",
       "id": 1
     },
     {
@@ -71,6 +71,16 @@
       "date": "2022-03-16",
       "department": "1",
       "id": 5
+    },
+    {
+      "firstName": "Jigar",
+      "lastName": "Bhanushali",
+      "email": "jigar@gmail.com",
+      "contact": "9421658732",
+      "gender": "male",
+      "date": "2022-03-18",
+      "department": "5",
+      "id": 6
     }
   ],
   "resume": [

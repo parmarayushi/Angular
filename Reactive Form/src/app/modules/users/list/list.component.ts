@@ -119,8 +119,8 @@ export class ListComponent implements OnInit {
     componentRef.instance.department = this.departmentData;
 
     if (id) {
-      console.log(this.editData);
       componentRef.instance.id = id;
+      componentRef.instance.editData=this.editData;
       componentRef.instance.userData.subscribe((result) => {
         overlayRef.detach();
         this.updateUser(id, result);
