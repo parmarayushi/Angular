@@ -1,0 +1,31 @@
+h2 {
+  padding: 20px 0 0 20px;
+  font-weight: 400;
+}
+
+.container {
+  padding: 20px;
+  margin: 20px;
+  background-color: white;
+  line-height: 1.5;
+}
+
+.text-box {
+  width: 50%;
+}
+
+.text-area {
+  height: 50px;
+  resize: none;
+}
+.text-danger {
+  color: red;
+}
+
+.button {
+  margin: 5px;
+}
+
+.btn-add {
+  color: blue;
+}

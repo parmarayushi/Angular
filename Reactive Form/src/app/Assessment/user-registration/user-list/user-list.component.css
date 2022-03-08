@@ -1,0 +1,62 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  line-height: 1.5;
+}
+
+table,
+tr {
+  padding: 5px;
+  border: 1px solid rgb(179, 177, 177);
+  border-collapse: collapse;
+  margin: 10px 10px 0 20px;
+  width: 97%;
+  overflow: hidden;
+  border-radius: 5px;
+  background-color: white;
+}
+
+th,td{
+  padding: 10px;
+  text-align: left;
+}
+th {
+  color: #dadade;
+  font-weight: 400;
+ 
+}
+
+td {
+  color: #767676;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.btn-edit {
+  width: 60px;
+  height: 24px;
+  background-color: #5371df;
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.btn-delete {
+  width: 60px;
+  height: 24px;
+  background-color:rgb(245, 119, 119);
+  color: white;
+  border-radius: 5px;
+  border: 0;
+}
+
+.button {
+  margin: 5px;
+  width: 50px;
+}
+
+.padding-left{
+  padding-left: 30px;
+}
+

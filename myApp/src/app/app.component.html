@@ -1,0 +1,24 @@
+<h2 style="text-align: center; background-color: rgb(235, 235, 127);">Interpolation Binding</h2>
+
+<!-- Start: interpolation-->
+<h2>NAME:{{ name }}</h2>
+<!--End: interpolation-->
+
+<h2 style="text-align: center; background-color: rgb(235, 235, 127);">Property Binding</h2>
+<!--Start:Property binding-->
+<img [src]="imgUrl" /><br />
+<!--End:Propert binding-->
+
+<h2 style="text-align: center; background-color: rgb(235, 235, 127);">Event Binding</h2>
+<!--Start:evnet binding-->
+<button (click)="onClick()">Submit</button><br />   
+<!--End:event binding-->
+
+<h2 style="text-align: center; background-color: rgb(235, 235, 127);">Two-way Binding</h2>
+<!--Strat:ngModel(two way binding)-->
+<input type="text" [(ngModel)]="data" /><br />
+<h3>{{ data }}</h3>
+<!--End:ngModel(two way binding)-->
+
+<h2 style="text-align: center; background-color: rgb(235, 235, 127);">Component Connection</h2>
+<app-parent></app-parent>

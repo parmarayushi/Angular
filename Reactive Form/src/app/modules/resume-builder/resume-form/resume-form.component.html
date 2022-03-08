@@ -1,0 +1,274 @@
+<h2>Resume</h2>
+<form [formGroup]="resumeBuilder" (ngSubmit)="onSubmit()">
+  <div class="container">
+    <div>
+      <label for="name">Name: </label><br />
+      <input
+        type="text"
+        placeholder="Enter Name"
+        formControlName="name"
+        class="text-box"
+      />
+      <div *ngIf="getvalue['name'].touched && getvalue['name'].invalid">
+        <small
+          class="text-danger"
+          *ngIf="getvalue['name'].errors && getvalue['name'].errors['required']"
+        >
+          *name is required
+        </small>
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['name'].errors && getvalue['name'].errors['minlength']
+          "
+        >
+          *minimum length should be 3
+        </small>
+      </div>
+    </div>
+    <div>
+      <label for="designation">Designation: </label><br />
+      <input
+        type="text"
+        placeholder="Enter Designation"
+        formControlName="designation"
+        class="text-box"
+      />
+      <div
+        *ngIf="
+          getvalue['designation'].touched && getvalue['designation'].invalid
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['designation'].errors &&
+            getvalue['designation'].errors['required']
+          "
+        >
+          *designation is required
+        </small>
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['designation'].errors &&
+            getvalue['designation'].errors['minlength']
+          "
+        >
+          *minimum length should be 3
+        </small>
+      </div>
+
+      <div>
+        <label for="email">E-mail: </label><br />
+        <input
+          type="text"
+          placeholder="abcd12@gmail.com"
+          formControlName="email"
+          class="text-box"
+        />
+        <div *ngIf="getvalue['email'].touched && getvalue['email'].invalid">
+          <small
+            class="text-danger"
+            *ngIf="
+              getvalue['email'].errors && getvalue['email'].errors['required']
+            "
+          >
+            *email is required
+          </small>
+          <small
+            class="text-danger"
+            *ngIf="
+              getvalue['email'].errors && getvalue['email'].errors['email']
+            "
+          >
+            *enter proper format
+          </small>
+        </div>
+      </div>
+
+      <div>
+        <label for="contact">Contact-no </label><br />
+        <input
+          type="text"
+          maxlength="10"
+          placeholder="1236547890"
+          formControlName="contact"
+          class="text-box"
+        />
+        <div *ngIf="getvalue['contact'].touched && getvalue['contact'].invalid">
+          <small
+            class="text-danger"
+            *ngIf="
+              getvalue['contact'].errors &&
+              getvalue['contact'].errors['required']
+            "
+          >
+            *contact is required
+          </small>
+          <small
+            class="text-danger"
+            *ngIf="
+              getvalue['contact'].errors &&
+              getvalue['contact'].errors['maxlength']
+            "
+          >
+            *maxlength should be 10
+          </small>
+        </div>
+      </div>
+
+      <div>
+        <label for="skills">Technical Skills: </label><br />
+        <button class="button btn-add" type="button" (click)="addSkills()">
+          Add Skills
+        </button>
+
+        <div
+          formArrayName="technicalskills"
+          *ngFor="let skill of technicalskill.controls; let i = index"
+        >
+          <div [formGroupName]="i">
+            <input
+              type="text"
+              formControlName="technicalskills"
+              placeholder="Technical Skills"
+            />
+            <small
+              class="text-danger"
+              *ngIf="
+                technicalskill.controls[i].get('technicalskills')?.touched &&
+                technicalskill.controls[i].get('technicalskills')?.invalid
+              "
+            >
+              *technical skills required
+            </small>
+            <button class="text-danger" type="button" (click)="deleteSkills(i)">
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="experience">Experience: </label><br />
+        <button class="button btn-add" type="button" (click)="addExperience()">
+          Add Experience
+        </button>
+
+        <div
+          formArrayName="experience"
+          *ngFor="let experince of experience.controls; let i = index"
+        >
+          <div [formGroupName]="i">
+            <input
+              type="text"
+              formControlName="name"
+              placeholder="Experience Name"
+            /><br />
+            <small
+              class="text-danger"
+              *ngIf="
+                experience.controls[i].get('name')?.touched &&
+                experience.controls[i].get('name')?.invalid
+              "
+            >
+              *experience name is required
+            </small>
+            <input
+              type="text"
+              formControlName="year"
+              placeholder="Experience Year"
+            /><br />
+            <small
+              class="text-danger"
+              *ngIf="
+                experience.controls[i].get('year')?.touched &&
+                experience.controls[i].get('year')?.invalid
+              "
+            >
+              *experience year is required
+            </small>
+            <input
+              type="text"
+              formControlName="post"
+              placeholder="Experience Post"
+            />
+            <small
+              class="text-danger"
+              *ngIf="
+                experience.controls[i].get('post')?.touched &&
+                experience.controls[i].get('post')?.invalid
+              "
+            >
+              *experience post is required
+            </small>
+            <button
+              class="text-danger"
+              type="button"
+              (click)="deleteExperience(i)"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <label for="name">Education: </label><br />
+        <button class="button btn-add" type="button" (click)="addEducation()">
+          Add Education
+        </button>
+
+        <div
+          formArrayName="education"
+          *ngFor="let education of education.controls; let i = index"
+        >
+          <div [formGroupName]="i">
+            <input
+              type="text"
+              formControlName="university"
+              placeholder="Enter University"
+            /><br />
+            <small
+              class="text-danger"
+              *ngIf="
+                education.get('university')?.touched &&
+                education.get('university')?.invalid
+              "
+            >
+              *university is required
+            </small>
+            <input
+              type="text"
+              formControlName="cgpa"
+              placeholder="Enter CGPA"
+            />
+            <small
+              class="text-danger"
+              *ngIf="
+                education.get('cgpa')?.touched && education.get('cgpa')?.invalid
+              "
+            >
+              *cgpa is required
+            </small>
+            <button
+              class="text-danger"
+              type="button"
+              (click)="deleteEducation(i)"
+            >
+              Delete
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="button" type="submit" [disabled]="resumeBuilder.invalid">
+          Submit
+        </button>
+        <button class="button" type="reset">Reset</button>
+      </div>
+    </div>
+  </div>
+</form>
