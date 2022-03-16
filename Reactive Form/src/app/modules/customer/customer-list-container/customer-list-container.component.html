@@ -1,0 +1,8 @@
+<div class="container-fluid p-4">
+    <div>
+        <app-customer-list-presentation
+        [customerList]="customerList$ | async"
+        (delete)="deleteCustomer($event)"
+        ></app-customer-list-presentation>
+    </div>
+  </div>

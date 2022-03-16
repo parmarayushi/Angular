@@ -52,6 +52,7 @@ const routes: Routes = [
     loadChildren: () =>
       import('./modules/ng-template-outlet/ng-template-outlet.module').then((m) => m.NgTemplateOutletModule),
   },
+  { path: 'customer', loadChildren: () => import('./modules/customer/customer.module').then(m => m.CustomerModule) },
 ];
 
 @NgModule({
