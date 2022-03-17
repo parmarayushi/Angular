@@ -24,7 +24,7 @@ export class CustomerService {
     return this.http.get<Customer>(`${this.apiLink}/customer/${id}`)
   }
 
-  public editCustomer(id:number,form:CustomerForm):Observable<Customer>{
+  public editCustomer(id:number,form:Customer):Observable<Customer>{
     return this.http.put<Customer>(`${this.apiLink}/customer/${id}`,form)
   }
 

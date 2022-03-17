@@ -26,6 +26,7 @@ export class CustomerListContainerComponent implements OnInit {
   deleteCustomer(id:number){
     this.customerService.deleteCustomer(id).subscribe(()=>{
       alert("Id "+id+ "is deleted");
+      this.getCustomers()
     })
   }
 }

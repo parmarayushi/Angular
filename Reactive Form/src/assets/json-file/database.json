@@ -172,12 +172,6 @@
   ],
   "customer": [
     {
-      "name": "Yash",
-      "age": "20",
-      "gender": "male",
-      "id": 3
-    },
-    {
       "name": "Aayushi",
       "age": "22",
       "gender": "female",
@@ -194,12 +188,6 @@
       "age": "23",
       "gender": "male",
       "id": 6
-    },
-    {
-      "name": "Shreya",
-      "age": "22",
-      "gender": "female",
-      "id": 7
     }
   ]
 }
