@@ -25,7 +25,7 @@ export class ListComponent implements OnInit {
   }
 
   public editData(form:Form){
-    this.service.saveDatatoEdit(form);
+    this.service.edit(form);
   }
 
   public deleteData(id:number){

@@ -22,7 +22,7 @@ export class UsersService {
     return this.http.get<Office[]>(`${this.apiLink}/office`);
   }
 
-  createUser(userData: UserRegistration): Observable<UserRegistration> {
+  createUser(userData:UserRegistration): Observable<UserRegistration> {
     return this.http.post<UserRegistration>(`${this.apiLink}/users/`, userData);
   }
   

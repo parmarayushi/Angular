@@ -49,7 +49,7 @@ export class FormComponent implements OnInit {
       this.service.add(this.userform.value);
     }
     else{
-      this.service.edit(this._id,this.userform.value);
+      this.service.update(this._id,this.userform.value);
       this._isEdit=false;
     }
     this.userform.reset();

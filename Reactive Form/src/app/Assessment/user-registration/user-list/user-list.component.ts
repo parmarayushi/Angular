@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Event } from '@angular/router';
 import { Client, Office, UserRegistration } from '../model/user.model';
 import { UsersService } from '../services/users.service';
 
@@ -8,43 +9,56 @@ import { UsersService } from '../services/users.service';
   styleUrls: ['./user-list.component.css'],
 })
 export class UserListComponent implements OnInit {
-  userData: UserRegistration[];
-  client: Client[];
-  office: Office[];
+  
+  @Input() userList: UserRegistration[];
+  @Input() client: Client[];
+  @Input() office: Office[];
+
+  @Output() editId:EventEmitter<number>;
+  @Output() deleteId:EventEmitter<number>;
   searchText: string = '';
   showForm: boolean = false;
   buttonDisabled: boolean = false;
-  constructor(private service: UsersService) {}
+
+  constructor(private service: UsersService) {
+    this.editId=new EventEmitter<number>();
+    this.deleteId=new EventEmitter<number>();
+  }
 
   ngOnInit(): void {
-    this.getclient();
-    this.getoffice();
-    this.getUserData();
   }
 
-  getUserData() {
-    this.service.getUserList().subscribe(
-      (result) => {
-        this.userData = result;
-      },
-      (error) => {
-        console.log('Something Went Wrong');
-      }
-    );
-  }
+  // getUserData() {
+  //   this.service.getUserList().subscribe(
+  //     (result) => {
+  //       this.userData = result;
+  //     },
+  //     (error) => {
+  //       console.log('Something Went Wrong');
+  //     }
+  //   );
+  // }
 
-  deleteUser(id: number) {
-    this.service.deleteUser(id).subscribe(
-      (result) => {
-        alert(id + ' is Deleted');
-        this.getUserData();
-      },
-      (error) => {
-        alert('Something Went Wrong');
-      }
-    );
-  }
+  // deleteUser(id: number) {
+  //   this.service.deleteUser(id).subscribe(
+  //     (result) => {
+  //       alert(id + ' is Deleted');
+  //       this.getUserData();
+  //     },
+  //     (error) => {
+  //       alert('Something Went Wrong');
+  //     }
+  //   );
+  // }
   
+  public editForm(id:number){
+this.editId.emit(id);
+  }
+
+  public deleteUser(id:number){
+    this.deleteId.emit(id);
+  }
+
   toggleForm() {
     this.showForm = !this.showForm;
     this.buttonDisabled = false;

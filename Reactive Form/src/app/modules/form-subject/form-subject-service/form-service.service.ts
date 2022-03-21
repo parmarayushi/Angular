@@ -10,28 +10,28 @@ export class FormServiceService {
       id:1,
       firstName:"aayushi",
       lastName:"parmar",
-      email:"aayushiparmae812@gmail.com",
+      email:"aayushiparmar812@gmail.com",
       contact:8421503215
     },
     {
       id:2,
-      firstName:"aayushi",
+      firstName:"yash",
       lastName:"parmar",
-      email:"aayushiparmae812@gmail.com",
+      email:"yashparmar06@gmail.com",
       contact:8421503215
     },
     {
       id:3,
-      firstName:"aayushi",
-      lastName:"parmar",
-      email:"aayushiparmae812@gmail.com",
+      firstName:"nirali",
+      lastName:"tandel",
+      email:"niralitandel15@gmail.com",
       contact:8421503215
     },
     {
       id:4,
-      firstName:"aayushi",
-      lastName:"parmar",
-      email:"aayushiparmae812@gmail.com",
+      firstName:"mrunal",
+      lastName:"patel",
+      email:"mrunalpatel@gmail.com",
       contact:8421503215
     }
   ]
@@ -55,22 +55,24 @@ export class FormServiceService {
 
    //add Data
    add(form:Form){
-    //form.id=++this.nextId;
+    form.id=++this.nextId;
     this.formData.push(form);
     this.form.next(this.formData);
    }
 
-   saveDatatoEdit(form:Form){
+   //save Data
+   edit(form:Form){
      this.editData.next(form)
    }
 
    //edit Data
-   edit(id:number,form:Form){
+   update(id:number,form:Form){
      let formindex=this.formData.findIndex((data=>data.id==id));
      this.formData[formindex]=form;
      this.formData[formindex].id=id;
    }
 
+   //Delete data
    delete(id:number){
     let index= this.formData.findIndex((data=>data.id==id))
     this.formData.splice(index,1);
