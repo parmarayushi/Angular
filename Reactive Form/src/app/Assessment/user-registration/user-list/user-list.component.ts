@@ -1,7 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Event } from '@angular/router';
 import { Client, Office, UserRegistration } from '../model/user.model';
-import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-user-list',
@@ -20,7 +18,7 @@ export class UserListComponent implements OnInit {
   showForm: boolean = false;
   buttonDisabled: boolean = false;
 
-  constructor(private service: UsersService) {
+  constructor() {
     this.editId=new EventEmitter<number>();
     this.deleteId=new EventEmitter<number>();
   }
@@ -64,11 +62,11 @@ this.editId.emit(id);
     this.buttonDisabled = false;
   }
 
-  getclient() {
-    this.service.getClient().subscribe((data) => (this.client = data));
-  }
+  // getclient() {
+  //   this.service.getClient().subscribe((data) => (this.client = data));
+  // }
 
-  getoffice() {
-    this.service.getOffice().subscribe((data) => (this.office = data));
-  }
+  // getoffice() {
+  //   this.service.getOffice().subscribe((data) => (this.office = data));
+  // }
 }

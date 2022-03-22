@@ -2,7 +2,6 @@ import { Component, EventEmitter, Input, OnChanges, OnInit, Output, SimpleChange
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Client, Office, UserRegistration } from '../model/user.model';
-import { UsersService } from '../services/users.service';
 
 @Component({
   selector: 'app-user-form',
@@ -31,8 +30,6 @@ export class UserFormComponent implements OnInit,OnChanges {
   constructor(
     private fb: FormBuilder,
     private route: ActivatedRoute,
-    private router: Router,
-    private service:UsersService
   ) {
     this.saveData=new EventEmitter<UserRegistration>()
     this.updateUser=new EventEmitter<UserRegistration>();
@@ -64,7 +61,7 @@ this.buildForm();
   }
 
   get getvalue() {
-    return this.userregistration.value;
+    return this.userregistration['controls'];
   }
 
   public editUserForm(){

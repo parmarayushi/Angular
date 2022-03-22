@@ -34,15 +34,15 @@
       />
       <div
         *ngIf="
-          getvalue['firstName']?.touched && getvalue['firstName'].invalid ||
+          getvalue['firstName'].touched && getvalue['firstName'].invalid ||
           submitted
         "
       >
         <small
           class="text-danger"
           *ngIf="
-            getvalue['firstName']?.errors &&
-            getvalue['firstName']?.errors['required']
+            getvalue['firstName'].errors &&
+            getvalue['firstName'].errors['required']
           "
         >
           *firstname is required
@@ -59,15 +59,15 @@
       />
       <div
         *ngIf="
-          getvalue['lastName']?.touched && getvalue['lastName'].invalid ||
+          getvalue['lastName'].touched && getvalue['lastName'].invalid ||
           submitted
         "
       >
         <small
           class="text-danger"
           *ngIf="
-            getvalue['lastName']?.errors &&
-              getvalue['lastName']?.errors['required'] 
+            getvalue['lastName'].errors &&
+              getvalue['lastName'].errors['required'] 
           "
         >
           *lastname is required
@@ -84,20 +84,20 @@
       />
       <div
         *ngIf="
-          getvalue['email']?.touched && getvalue['email'].invalid || submitted
+          getvalue['email'].touched && getvalue['email'].invalid || submitted
         "
       >
         <small
           class="text-danger"
           *ngIf="
-            getvalue['email']?.errors && getvalue['email']?.errors['required']
+            getvalue['email'].errors && getvalue['email'].errors['required']
           "
         >
           *email is required
         </small>
         <div
           class="text-danger"
-          *ngIf="getvalue['email']?.errors && getvalue['email']?.errors['email']"
+          *ngIf="getvalue['email'].errors && getvalue['email'].errors['email']"
         >
           *enter proper format
         </div>
@@ -113,14 +113,14 @@
       />
       <div
         *ngIf="
-          getvalue['contact']?.touched && getvalue['contact'].invalid ||
+          getvalue['contact'].touched && getvalue['contact'].invalid ||
           submitted
         "
       >
         <small
           class="text-danger"
           *ngIf="
-            getvalue['contact']?.errors && getvalue['contact']?.errors['required']
+            getvalue['contact'].errors && getvalue['contact'].errors['required']
           "
         >
           *contact is required
@@ -128,8 +128,8 @@
         <div
           class="text-danger"
           *ngIf="
-            getvalue['contact']?.errors &&
-            getvalue['contact']?.errors['maxlength']
+            getvalue['contact'].errors &&
+            getvalue['contact'].errors['maxlength']
           "
         >
           *maximum length should be 10
@@ -144,14 +144,14 @@
 
       <div
         *ngIf="
-          getvalue['client']?.touched && getvalue['client'].invalid  ||
+          getvalue['client'].touched && getvalue['client'].invalid  ||
           submitted
         "
       >
         <small
           class="text-danger"
           *ngIf="
-            getvalue['client']?.errors && getvalue['client']?.errors['required']
+            getvalue['client'].errors && getvalue['client'].errors['required']
           "
         >
           *client name is required
@@ -166,14 +166,14 @@
 
       <div
         *ngIf="
-        getvalue['office']?.touched && getvalue['office']?.errors||
+        getvalue['office'].touched && getvalue['office'].errors||
         submitted
         "
       >
         <small
           class="text-danger"
           *ngIf="
-            getvalue['office']?.errors && getvalue['office']?.errors['required']
+            getvalue['office'].errors && getvalue['office'].errors['required']
           "
         >
           *office is required

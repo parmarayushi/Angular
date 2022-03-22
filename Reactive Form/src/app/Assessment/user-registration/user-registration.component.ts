@@ -10,7 +10,6 @@ import { UsersService } from './services/users.service';
 })
 export class UserRegistrationComponent implements OnInit {
 
-
   public userregistration:FormGroup;
   public userData:UserRegistration[];
   public clientData:Client[];
@@ -114,5 +113,4 @@ export class UserRegistrationComponent implements OnInit {
   //       .subscribe((x) => this.userregistration.patchValue(x));
   //   }
   // }
-  
 }

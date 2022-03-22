@@ -13,6 +13,7 @@
     </thead>
     <tbody  *ngIf="userList?.length">
       <tr *ngFor="let user of userList">
+        <!-- | sortclient: 2 -->
         <td class="padding-left">{{ user.firstName }}</td>
         <td>{{ user.lastName }}</td>
         <td>{{ user.client | client: client }}</td>

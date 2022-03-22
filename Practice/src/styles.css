@@ -1,0 +1,29 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.flex-wrap{
+    flex-wrap: wrap;
+}
+
+.container{
+    height: 100%;
+    padding: 20px;
+}
+
+.card{
+    border:1px solid black;
+    width: 200px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.card-title{
+    font-size: 18px;
+}

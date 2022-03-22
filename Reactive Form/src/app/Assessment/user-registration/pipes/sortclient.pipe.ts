@@ -1,17 +1,17 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Client } from '../model/user.model';
+import { Client, UserRegistration } from '../model/user.model';
 
 @Pipe({
   name: 'sortclient'
 })
 export class SortclientPipe implements PipeTransform {
 
-  transform(value: Client[], id: number): Client[] {
+  transform(value: UserRegistration[], id: number): UserRegistration[] {
     if(id==0){
       return value;
     }else{
-      return value.filter((data:Client)=>{
-        // return data.clientname==id;
+      return value.filter((data:UserRegistration)=>{
+        return data.client==id
       })
     }
     

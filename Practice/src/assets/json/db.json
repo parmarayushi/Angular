@@ -1,0 +1,181 @@
+{
+    "department": [
+      {
+        "id": 1,
+        "name": "frontend",
+        "emps": [
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          }
+        ]
+      },
+      {
+        "id": 2,
+        "name": ".net",
+        "emps": [
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          },
+          {
+            "id": 1,
+            "name": "Aayushi Parmar",
+            "age": 22,
+            "gender": "Female",
+            "hobbies": [
+              "Cooking",
+              "Badminton",
+              "Drawing"
+            ]
+          }
+        ]
+      }
+    ]
+}

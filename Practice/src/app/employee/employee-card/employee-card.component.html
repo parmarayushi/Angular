@@ -1,0 +1,18 @@
+<div class="container d-flex flex-wrap">
+    <div *ngFor="let employee of emp">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">{{employee.name}}</h5>
+                <p class="card-text">Age: {{employee.age}}</p>
+                <p class="card-text">Gender: {{employee.gender}}</p>
+                <div class="card-text">Hobbies:
+                    <ul>
+                        <li *ngFor="let hobbies of employee.hobbies">
+                        {{hobbies}}
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
