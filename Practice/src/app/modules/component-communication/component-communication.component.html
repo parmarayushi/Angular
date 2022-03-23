@@ -1,0 +1,14 @@
+<div class="container h-100 p-5">
+    <div class="card">
+        <div class="card-header">
+            {{value}}<h4>Parent Component</h4>
+        </div>
+        <div class="card-body">
+            Name:<input type="text" class="form-control" [(ngModel)]="entername"/>
+            <input type="button" value="submit"  (click)="sendData()" class="btn btn-primary mt-2">
+            <app-child [name]="data"  (sendTitle)="sendtitle($event)"></app-child>
+        </div>
+    </div>
+</div>
+
+

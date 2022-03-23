@@ -1,10 +1,10 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Department } from '../model/emp.model';
+import { Department } from '../models/emp.model';
 
 @Injectable()
-export class EmployeeService {
+export class EmpService {
 
   private apiLink:string="http://localhost:3000"
 

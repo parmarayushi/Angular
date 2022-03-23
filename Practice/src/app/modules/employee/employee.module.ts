@@ -3,23 +3,23 @@ import { CommonModule } from '@angular/common';
 
 import { EmployeeRoutingModule } from './employee-routing.module';
 import { EmployeeComponent } from './employee.component';
+import { EmpCardComponent } from './emp-card/emp-card.component';
+import { EmpService } from './services/emp.service';
 import { HttpClientModule } from '@angular/common/http';
-import { EmployeeCardComponent } from './employee-card/employee-card.component';
-import { EmployeeService } from './services/employee.service';
 
 
 @NgModule({
   declarations: [
     EmployeeComponent,
-    EmployeeCardComponent
+    EmpCardComponent
   ],
   imports: [
     CommonModule,
-    EmployeeRoutingModule,
     HttpClientModule,
+    EmployeeRoutingModule
   ],
   providers:[
-    EmployeeService
+    EmpService
   ]
 })
 export class EmployeeModule { }

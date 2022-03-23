@@ -1,12 +1,12 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Employee } from '../model/emp.model';
+import { Employee } from '../models/emp.model';
 
 @Component({
-  selector: 'app-employee-card',
-  templateUrl: './employee-card.component.html',
-  styleUrls: ['./employee-card.component.css']
+  selector: 'app-emp-card',
+  templateUrl: './emp-card.component.html',
+  styleUrls: ['./emp-card.component.scss']
 })
-export class EmployeeCardComponent implements OnInit {
+export class EmpCardComponent implements OnInit {
 
   @Input() set emp(emp:Employee[]){
     this._emp=emp;
