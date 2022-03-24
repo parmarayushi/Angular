@@ -2,6 +2,7 @@
     <div>
         <app-customer-list-presentation
         [customerList]="customerList$ | async"
+        [departmentList]="departmentList$ |async"
         (delete)="deleteCustomer($event)"
         ></app-customer-list-presentation>
     </div>

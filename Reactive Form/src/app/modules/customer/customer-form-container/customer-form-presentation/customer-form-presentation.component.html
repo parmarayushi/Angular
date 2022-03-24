@@ -4,36 +4,104 @@
     <form [formGroup]="customerForm">
 
       <div>
-        <label for="name">Name: </label><br />
-        <input type="text" id="name" name="name" placeholder="Enter first Name" formControlName="name"
+        <label for="firstname">First Name: </label><br />
+        <input type="text" id="firstname" name="firstname" placeholder="Enter first Name" formControlName="firstname"
           class="text-box" />
         <div
-        *ngIf="getvalue['name'].touched && getvalue['name'].invalid"
+        *ngIf="getvalue['firstname'].touched && getvalue['firstname'].invalid"
       >
         <small
           class="text-danger"
           *ngIf="
-            getvalue['name'].errors &&
-            getvalue['name'].errors['required']
+            getvalue['firstname'].errors &&
+            getvalue['firstname'].errors['required']
           "
         >
-          *name is required
+          *firstname is required
         </small>
-        <div
-          class="text-danger"
-          *ngIf="
-            getvalue['name'].errors &&
-            getvalue['name'].errors['minlength']
-          "
-        >
-          *minimum length should be 3
-        </div>
       </div>
       </div>
 
       <div>
+        <label for="lastname">Last Name: </label><br />
+        <input type="text" id="lastname" name="lastname" placeholder="Enter Last Name" formControlName="lastname"
+          class="text-box" />
+        <div
+        *ngIf="getvalue['lastname'].touched && getvalue['lastname'].invalid"
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['lastname'].errors &&
+            getvalue['lastname'].errors['required']
+          "
+        >
+          *lastname is required
+        </small>
+      </div>
+      </div>
+
+      <div>
+        <label for="city">City: </label><br />
+        <input type="text" id="city" name="city" placeholder="Enter your city" formControlName="city"
+          class="text-box" />
+        <div
+        *ngIf="getvalue['city'].touched && getvalue['city'].invalid"
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['city'].errors &&
+            getvalue['city'].errors['required']
+          "
+        >
+          *city is required
+        </small>
+      </div>
+      </div>
+
+      <div>
+        <label for="contactno">Contact No.: </label><br />
+        <input type="text" id="contactno" name="contactno" placeholder="Enter Contact no" formControlName="contactno"
+          class="text-box" />
+        <div
+        *ngIf="getvalue['contactno'].touched && getvalue['contactno'].invalid"
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['contactno'].errors &&
+            getvalue['contactno'].errors['required']
+          "
+        >
+          *contactno is required
+        </small>
+      </div>
+      </div>
+
+      <div>
+        <label for="email">E-mail: </label><br />
+        <input type="email" id="email" name="email" placeholder="abc12@gmail.com" formControlName="email"
+          class="text-box" />
+        <div
+        *ngIf="getvalue['email'].touched && getvalue['email'].invalid"
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['email'].errors &&
+            getvalue['email'].errors['required']
+          "
+        >
+          *email is required
+        </small>
+      </div>
+      </div>
+
+
+      <div>
         <label for="age">Age: </label><br />
-        <input type="text" id="age" name="age" placeholder="Enter last Name" formControlName="age" class="text-box" />
+        <input type="text" id="age" name="age" placeholder="Enter your age" formControlName="age" class="text-box" />
         <div *ngIf="getvalue['age'].touched && getvalue['age'].invalid">
         <small
           class="text-danger"
@@ -45,6 +113,27 @@
           *age is required
         </small>
       </div>
+      </div>
+
+      <select name="department" id="department" class="department" formControlName="department">
+        <option *ngFor="let department of departmentList" [value]="department.id">
+          {{ department.name }}
+        </option>
+      </select>
+
+      <div
+        *ngIf="
+        getvalue['department'].touched && getvalue['department'].errors
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['department'].errors && getvalue['department'].errors['required']
+          "
+        >
+          *department is required
+        </small>
       </div>
 
       <div>

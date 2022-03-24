@@ -2,7 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
-import { Customer, CustomerForm } from './customer.model';
+import { Customer, Department } from './customer.model';
 
 @Injectable()
 export class CustomerService {
@@ -12,6 +12,10 @@ export class CustomerService {
     this.apiLink = environment.baseURL;
   }
 
+  public getDepartment(): Observable<Department[]> {
+    return this.http.get<Department[]>(`${this.apiLink}/department`);
+  }
+  
   public getCustomer(): Observable<Customer[]> {
     return this.http.get<Customer[]>(`${this.apiLink}/customer`);
   }

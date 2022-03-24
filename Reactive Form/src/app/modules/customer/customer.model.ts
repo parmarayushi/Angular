@@ -1,33 +1,53 @@
 export class Customer {
     public id: number;
-    public name: string;
-    public age: string;
+    public firstname: string;
+    public lastname: string;
+    public city:string;
+    public contactno: number;
+    public email:string
+    public age: number;
+    public department: number;
     public gender: string;
     constructor(
       id: number,
-      name: string,
-      age: string,
+      firstname: string,
+      lastname: string,
+      city:string,
+      contactno: number,
+      email:string,
+      age: number,
+      department: number,
       gender: string
     ) {
       this.id = id;
-      this.name = name;
+      this.firstname = firstname;
+      this.lastname = lastname;
+      this.city = city;
+      this.contactno = contactno;
+      this.email = email;
       this.age = age;
+      this.department = department;
       this.gender = gender;
     }
   }
 
-  export class CustomerForm {
-    public name: string;
-    public age: string;
-    public gender: string;
-    constructor(
-      name: string,
-      age: string,
-      gender: string
-    ) {
-      this.name = name;
-      this.age = age;
-      this.gender = gender;
+  export class Department {
+    id: number;
+    name: string;
+    constructor(id:number,name:string){
+      this.id=id;
+      this.name=name
     }
   }
-  
+
+  export class Filter{
+    customerage:number;
+    city:string;
+    gender:string;
+    constructor(customerage:number,city:string,gender:string){
+      this.customerage=customerage;
+      this.city=city;
+      this.gender=gender;
+    }
+  }
+

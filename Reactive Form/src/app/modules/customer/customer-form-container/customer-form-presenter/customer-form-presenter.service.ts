@@ -18,8 +18,13 @@ export class CustomerFormPresenterService {
 
   buildForm(){
     return this.fb.group({
-      name: ['', Validators.required],
-      age: ['', Validators.required ],
+      firstname: ['', Validators.required],
+      lastname: ['', Validators.required],
+      city: ['', Validators.required],
+      contactno: ['', Validators.required],
+      email:['',[Validators.required,Validators.email]],
+      age: ['', Validators.required],
+      department: ['', Validators.required ],
       gender: ['', Validators.required]
     })
   }

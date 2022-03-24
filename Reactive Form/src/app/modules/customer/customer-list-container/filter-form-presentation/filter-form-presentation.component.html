@@ -1,0 +1,70 @@
+<div class="model-wrapper">
+    <h2>Filter Data</h2>
+  
+    <div class="model-body">
+      <form [formGroup]="filterForm">
+  
+        <div>
+          <label for="customerage">Age: </label><br />
+          <input
+            type="text"
+            id="customerage"
+            name="customerage"
+            placeholder="Enter age"
+            formControlName="customerage"
+            class="text-box"
+          />
+        </div>
+
+        <div>
+          <label for="city">City: </label><br />
+          <input
+            type="text"
+            id="city"
+            name="city"
+            placeholder="+91 1234567890"
+            maxlength="10"
+            formControlName="city"
+            class="text-box"
+          />
+        </div>
+  
+        <div>
+          <label for="gender">Gender: </label><br />
+  
+          <input
+            type="radio"
+            name="gender"
+            id="female"
+            value="female"
+            formControlName="gender"
+          /><label for="female" class="padding-right">Female</label>
+  
+          <input
+            type="radio"
+            name="gender"
+            id="male"
+            value="male"
+            formControlName="gender"
+          />
+          <label for="male">Male</label>
+        </div>
+  
+        <div class="d-flex space-between">
+          <div>
+            <button
+              class="btn"
+              type="submit"
+              (click)="onFilter()"
+            >
+              Save
+            </button>
+          </div>
+          <div>
+            <button class="btn">Cancel</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+  

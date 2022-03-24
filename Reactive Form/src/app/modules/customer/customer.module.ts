@@ -10,6 +10,9 @@ import { CustomerListPresentationComponent } from './customer-list-container/cus
 import { HttpClientModule } from '@angular/common/http';
 import { CustomerService } from './customer.service';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { DepartmentPipe } from './pipe/department.pipe';
+import { FilterFormPresentationComponent } from './customer-list-container/filter-form-presentation/filter-form-presentation.component';
+import { OverlayModule } from '@angular/cdk/overlay';
 
 
 @NgModule({
@@ -19,13 +22,16 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CustomerListContainerComponent,
     CustomerFormPresentationComponent,
     CustomerListPresentationComponent,
+    DepartmentPipe,
+    FilterFormPresentationComponent
   ],
   imports: [
     CommonModule,
     CustomerRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    OverlayModule
   ],
   providers:[
     CustomerService

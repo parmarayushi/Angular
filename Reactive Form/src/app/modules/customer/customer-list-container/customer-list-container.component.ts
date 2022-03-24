@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Customer } from '../customer.model';
+import { Customer, Department } from '../customer.model';
 import { CustomerService } from '../customer.service';
 
 @Component({
@@ -10,17 +10,21 @@ import { CustomerService } from '../customer.service';
 })
 export class CustomerListContainerComponent implements OnInit {
 
-  public customerList$:Observable<Customer[]>;
-  constructor(private customerService:CustomerService) { 
-    this.customerList$=new Observable();
-  }
+  public customerList$:Observable<Customer[]>=new Observable();
+  public departmentList$:Observable<Department[]>=new Observable();
+  constructor(private customerService:CustomerService) { }
 
   ngOnInit(): void {
     this.getCustomers();
+    this.getDepartments();
   }
 
   getCustomers(){
     this.customerList$=this.customerService.getCustomer()
+  }
+
+  getDepartments(){
+   this.departmentList$=this.customerService.getDepartment()
   }
 
   deleteCustomer(id:number){

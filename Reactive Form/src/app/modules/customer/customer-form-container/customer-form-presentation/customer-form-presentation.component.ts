@@ -1,7 +1,7 @@
 import { Location } from '@angular/common';
 import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup } from '@angular/forms';
-import { Customer } from '../../customer.model';
+import { Customer, Department } from '../../customer.model';
 import { CustomerFormPresenterService } from '../customer-form-presenter/customer-form-presenter.service';
 
 @Component({
@@ -26,7 +26,19 @@ export class CustomerFormPresentationComponent implements OnInit {
     return this._customerData;
   }
 
+  @Input() public set departmentList(value:Department[] |  null){
+    if(value){
+      this._departmentList=value;
+      // console.log(value);
+    }  
+  }
+
+  public get departmentList():Department[] | null{
+    return this._departmentList;
+  }
+
   private _customerData!:Customer;
+  private _departmentList!:Department[];
 
   @Output() public add:EventEmitter<Customer>;
   @Output() public edit:EventEmitter<Customer>;
@@ -35,6 +47,7 @@ export class CustomerFormPresentationComponent implements OnInit {
   public customerForm: FormGroup;
   constructor( private customerFormPresenter: CustomerFormPresenterService,  private location:Location) { 
     this.customerForm=this.customerFormPresenter.buildForm();
+    this._departmentList=[];
     this.add=new EventEmitter();
     this.edit=new EventEmitter();
     this.formTitle="Add Customer"

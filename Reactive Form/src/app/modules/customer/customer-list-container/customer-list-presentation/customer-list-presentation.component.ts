@@ -1,6 +1,6 @@
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Customer } from '../../customer.model';
+import { Customer, Department, Filter } from '../../customer.model';
 import { CustomerListPresenterService } from '../customer-list-presenter/customer-list-presenter.service';
 
 @Component({
@@ -14,6 +14,7 @@ export class CustomerListPresentationComponent implements OnInit {
 
   @Input() public set customerList(value:Customer[] |  null){
     if(value){
+      console.log(this.filterList)
       this._customerList=value;
       // console.log(value);
     }  
@@ -23,16 +24,37 @@ export class CustomerListPresentationComponent implements OnInit {
     return this._customerList;
   }
 
+  @Input() public set departmentList(value:Department[] |  null){
+    if(value){
+      this._departmentList=value;
+      // console.log(value);
+    }  
+  }
+
+  public get departmentList():Department[]{
+    return this._departmentList;
+  }
+
   @Output() public delete:EventEmitter<number>;
 
-  private _customerList!: Customer[];
-  constructor(private customerListPresenter:CustomerListPresenterService,private router:Router) { 
+  public filterList:Filter;
+  private _customerList: Customer[];
+  private _departmentList:Department[];
+  constructor(private customerListPresenter:CustomerListPresenterService ,private router:Router,private cdr:ChangeDetectorRef) { 
+    this._departmentList=[];
     this.delete=new EventEmitter();
   }
 
   ngOnInit(): void {
     this.customerListPresenter.delete$.subscribe((res: number) => {
       this.delete.emit(res);
+    })
+
+    this.customerListPresenter.filter$.subscribe(res=>{
+      const newCustomerList=this._customerList.filter(data=> data.age == res.customerage);
+      console.log(newCustomerList);    
+      this._customerList = newCustomerList;  
+      this.cdr.detectChanges();
     })
   }
 
@@ -42,5 +64,9 @@ export class CustomerListPresentationComponent implements OnInit {
 
   onEdit(id: number) {
     this.router.navigateByUrl(`customer/edit/${id}`);
+  }
+
+  onFilterSubmit(){
+    this.customerListPresenter.openFilterModel();
   }
 }
