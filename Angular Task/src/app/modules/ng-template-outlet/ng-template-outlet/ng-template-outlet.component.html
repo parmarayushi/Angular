@@ -1,0 +1,35 @@
+<div class="wrapper">
+  <h3 class="m-3 fw-bolder">ngTemplateOutlet Example</h3>
+
+  <label for="mode">Display Mode:</label>
+  <select [(ngModel)]="mode" class="dropdown">
+    <option
+      *ngFor="let item of modeOptions"
+      [ngValue]="item.mode"
+      class="dropdown"
+    >
+      {{ item.mode }}
+    </option>
+  </select>
+
+  <ng-template let-items #cardTemplate>
+    <div class="card" *ngFor="let item of items">
+      <h3 class="card-title">{{ item.header }}</h3>
+      <p class="card-text">{{ item.content }}</p>
+    </div>
+  </ng-template>
+
+  <ng-template let-items #listTemplate>
+    <ul class="list-view">
+      <li *ngFor="let item of items" class="list-item">
+        <strong>{{ item.header }} </strong> ( {{ item.content }} )
+      </li>
+    </ul>
+  </ng-template>
+
+  <ng-container
+    [ngTemplateOutlet]="template"
+    [ngTemplateOutletContext]="{ $implicit: items }"
+  >
+  </ng-container>
+</div>

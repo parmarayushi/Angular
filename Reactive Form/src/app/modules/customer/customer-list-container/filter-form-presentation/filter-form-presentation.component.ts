@@ -14,12 +14,14 @@ import { FilterFormPresenterService } from '../filter-form-presenter/filter-form
 export class FilterFormPresentationComponent implements OnInit {
 
 @Output() public filterData:EventEmitter<Filter>
+@Output() public cancel :EventEmitter<Filter>
 
   public filterForm:FormGroup;
   constructor(private filterFormpresenter:FilterFormPresenterService,private location:Location) {
     this.filterForm=this.filterFormpresenter.buildForm();
 
     this.filterData=new EventEmitter();
+    this.cancel=new EventEmitter<Filter>();
    }
 
   ngOnInit(): void {
@@ -27,5 +29,9 @@ export class FilterFormPresentationComponent implements OnInit {
 
   onFilter(){
     this.filterData.emit(this.filterForm.value)
+  }
+
+  onCancel(){
+    this.cancel.emit();
   }
 }

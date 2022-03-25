@@ -1,0 +1,28 @@
+  <table>
+    <thead>
+      <tr>
+        <th scope="col" class="padding-left">#</th>
+        <th scope="col" class="padding-left">FIRST NAME</th>
+        <th scope="col">LAST NAME</th>
+        <th scope="col" class="padding-left">EMAIL</th>
+        <th scope="col">CONTACT</th>
+        <th scope="col"  class="d-flex justify-content-center">Action</th>
+      </tr>
+    </thead>
+    <tbody  *ngIf="data?.length">
+      <tr *ngFor="let user of data ,let i=index">
+        <th scope="row" class="padding-left">{{ i + 1 }}.</th>
+        <td class="padding-left">{{ user.firstName }}</td>
+        <td>{{ user.lastName }}</td>
+        <td class="padding-left">{{ user.email }}</td>
+        <td>{{ user.contact }}</td>
+        <td  class="d-flex justify-content-center">
+          <button class="button btn-edit" (click)="editData(user)">Edit</button>
+          <button class="button btn-delete" (click)="deleteData(user.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+    <div *ngIf="!data?.length">No Record Inserted..</div>
+  </table>
+
+

@@ -1,0 +1,187 @@
+<div class="form-wrapper">
+<h3 class="m-3 fw-bolder">Registration Form</h3>
+<div class="container">
+<form [formGroup]="registrationform" (ngSubmit)="onSubmit()">
+ 
+    <div>
+      <label for="firstName">First Name: </label><br />
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="Enter first Name"
+        formControlName="firstName"
+        class="text-box"
+      />
+      <div
+        *ngIf="getvalue['firstName'].touched && getvalue['firstName'].invalid"
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['firstName'].errors &&
+            getvalue['firstName'].errors['required']
+          "
+        >
+          *firstname is required
+        </small>
+        <div
+          class="text-danger"
+          *ngIf="
+            getvalue['firstName'].errors &&
+            getvalue['firstName'].errors['minlength']
+          "
+        >
+          *minimum length should be 3
+        </div>
+      </div>
+    </div>
+
+    <div>
+      <label for="lastName">Last Name: </label><br />
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Enter last Name"
+        formControlName="lastName"
+        class="text-box"
+      />
+      <div *ngIf="getvalue['lastName'].touched && getvalue['lastName'].invalid">
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['lastName'].errors &&
+            getvalue['lastName'].errors['required']
+          "
+        >
+          *lastname is required
+        </small>
+      </div>
+    </div>
+
+    <div>
+      <label for="e-mail">E-mail: </label><br />
+      <input
+        type="text"
+        id="e-mail"
+        name="e-mail"
+        placeholder="abc12@gmail.com"
+        formControlName="email"
+        class="text-box"
+      />
+      <div *ngIf="getvalue['email'].touched && getvalue['email'].invalid">
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['email'].errors && getvalue['email'].errors['required']
+          "
+        >
+          *email is required
+        </small>
+        <small
+          class="text-danger"
+          *ngIf="getvalue['email'].errors && getvalue['email'].errors['email']"
+        >
+          *enter proper format
+        </small>
+      </div>
+    </div>
+
+    <div>
+      <label for="contact">Contact no.: </label><br />
+      <input
+        type="text"
+        id="contact"
+        name="contact"
+        placeholder="+91 1234567890"
+        maxlength="10"
+        formControlName="contact"
+        class="text-box"
+      />
+      <div *ngIf="getvalue['contact'].touched && getvalue['contact'].invalid">
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['contact'].errors && getvalue['contact'].errors['required']
+          ">
+          *contact is required
+        </small>
+      </div>
+    </div>
+
+    <div>
+      <label for="gender">Gender: </label><br />
+
+      <input
+        type="radio"
+        name="gender"
+        id="female"
+        value="female"
+        formControlName="gender"
+      /><label for="female" class="padding-right">Female</label>
+
+      <input
+        type="radio"
+        name="gender"
+        id="male"
+        value="male"
+        formControlName="gender"
+      />
+      <label for="male">Male</label>
+    </div>
+
+    <div>
+      <label for="d.o.e">Date of Employment: </label><br />
+      <input
+        type="date"
+        name="date"
+        id="date"
+        formControlName="date"
+        class="text-box"
+      />
+    </div>
+
+    <div>
+      <label for="department">Department: </label><br />
+      <select name="department" id="department" formControlName="department">
+        <option
+          *ngFor="let department of departmentData"
+          [value]="department.id"
+        >
+          {{ department.name }}
+        </option>
+      </select>
+      <div
+      *ngIf="
+      getvalue['department'].touched && getvalue['department'].errors ||
+      submitted
+      "
+    >
+      <small
+        class="text-danger"
+        *ngIf="
+          getvalue['department'].errors && getvalue['department'].errors['required']
+        "
+      >
+        *department is required
+      </small>
+    </div>
+    </div>
+
+    <div class="d-flex space-between">
+      <div>
+        <button class="btn" type="submit" [disabled]="registrationform.invalid">
+          Save
+        </button>
+        <button class="btn" type="reset">Reset</button>
+      </div>
+      <div>
+        <button class="btn" routerLink="/reactive/cancel">Cancel</button>
+      </div>
+    </div>
+</form>
+</div>
+</div>
+
+<!-- {{registrationform.value|json}} -->

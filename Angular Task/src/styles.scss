@@ -1,0 +1,70 @@
+
+// Project base and component style import
+@import '../src/assets/scss/base/index';
+
+// Vendor base and component style import
+@import '../src/assets/scss/vendor/bootstrap-base';
+
+@import '../src/assets/scss/vendor/bootstrap-components';
+
+// Project Specific Components
+@import '../src/assets/scss/component/index';
+
+// Now other style import
+@import '../src/assets/scss/layout/index';
+
+@import '../src/assets/scss/utilities/index';
+
+@import '@angular/cdk/overlay-prebuilt.css';
+
+
+// .text-align-center {
+//   text-align: center;
+// }
+
+// .overflow-auto {
+//   overflow: auto;
+// }
+
+// .overflow-hidden{
+//   overflow: hidden;
+// }
+
+// .d-flex {
+//   display: flex;
+// }
+
+// .flex-grow-1{
+//   flex-grow: 1;
+// }
+
+// .align-item-center {
+//   align-items: center;
+// }
+
+// .justify-content-center{
+//   justify-content: center;
+// }
+
+// .justify-content-right {
+//   justify-content: right;
+// }
+
+// .space-between{
+//   justify-content: space-between;
+// }
+
+// .flex-column {
+//   flex-direction: column;
+// }
+// .flex-wrap{
+//   flex-wrap: wrap;
+// }
+
+
+
+/* @media (max-width: 768px) {
+ .sidebar {
+   display: none;
+ } 
+} */

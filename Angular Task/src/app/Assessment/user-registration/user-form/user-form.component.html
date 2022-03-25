@@ -1,0 +1,191 @@
+<header>
+  <div class="header">
+    <h3 class="m-3 fw-bolder">Users</h3>
+    <div>
+      <label>Client: </label>
+      <select class="client-sort" [(ngModel)]="sortclient">
+        <option *ngFor="let client of clientName" [value]="client.id">
+          {{ client.clientname}}
+        </option>
+      </select>
+      <input
+        type="text"
+        placeholder="Search..."
+        class="search-bar"
+        [(ngModel)]="searchText"
+      />
+     
+      <button input type="button" class="btn-newuser" (click)="toggleForm()">
+        + NEW USER
+      </button>
+    </div>
+  </div>
+</header>
+<div *ngIf="showForm">
+  <form [formGroup]="userregistration" (ngSubmit)="onSubmit()">
+    <fieldset class="container">
+      <input
+        type="text"
+        id="firstName"
+        name="firstName"
+        placeholder="First Name"
+        formControlName="firstName"
+        class="text-box"
+      />
+      <div
+        *ngIf="
+          getvalue['firstName'].touched && getvalue['firstName'].invalid ||
+          submitted
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['firstName'].errors &&
+            getvalue['firstName'].errors['required']
+          "
+        >
+          *firstname is required
+        </small>
+      </div>
+
+      <input
+        type="text"
+        id="lastName"
+        name="lastName"
+        placeholder="Last Name"
+        formControlName="lastName"
+        class="text-box"
+      />
+      <div
+        *ngIf="
+          getvalue['lastName'].touched && getvalue['lastName'].invalid ||
+          submitted
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['lastName'].errors &&
+              getvalue['lastName'].errors['required'] 
+          "
+        >
+          *lastname is required
+        </small>
+      </div>
+
+      <input
+        type="text"
+        id="e-mail"
+        name="e-mail"
+        placeholder="Email"
+        formControlName="email"
+        class="text-box"
+      />
+      <div
+        *ngIf="
+          getvalue['email'].touched && getvalue['email'].invalid || submitted
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['email'].errors && getvalue['email'].errors['required']
+          "
+        >
+          *email is required
+        </small>
+        <div
+          class="text-danger"
+          *ngIf="getvalue['email'].errors && getvalue['email'].errors['email']"
+        >
+          *enter proper format
+        </div>
+      </div>
+
+      <input
+        type="text"
+        id="contact"
+        name="contact"
+        placeholder="Primary Contact Number"
+        formControlName="contact"
+        class="text-box"
+      />
+      <div
+        *ngIf="
+          getvalue['contact'].touched && getvalue['contact'].invalid ||
+          submitted
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['contact'].errors && getvalue['contact'].errors['required']
+          "
+        >
+          *contact is required
+        </small>
+        <div
+          class="text-danger"
+          *ngIf="
+            getvalue['contact'].errors &&
+            getvalue['contact'].errors['maxlength']
+          "
+        >
+          *maximum length should be 10
+        </div>
+      </div>
+
+      <select name="client" id="client" class="client" formControlName="client">
+        <option *ngFor="let client of clientName" [value]="client.id">
+          {{ client.clientname }}
+        </option>
+      </select>
+
+      <div
+        *ngIf="
+          getvalue['client'].touched && getvalue['client'].invalid  ||
+          submitted
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['client'].errors && getvalue['client'].errors['required']
+          "
+        >
+          *client name is required
+        </small>
+      </div>
+
+      <select name="office" id="office" class="office" formControlName="office">
+        <option *ngFor="let office of officeName" [value]="office.id">
+          {{ office.officename }}
+        </option>
+      </select>
+
+      <div
+        *ngIf="
+        getvalue['office'].touched && getvalue['office'].errors||
+        submitted
+        "
+      >
+        <small
+          class="text-danger"
+          *ngIf="
+            getvalue['office'].errors && getvalue['office'].errors['required']
+          "
+        >
+          *office is required
+        </small>
+      </div>
+
+      <div class="d-flex justify-content-end margin-top-40">
+        <div>
+          <button class="btn-cancel" (click)="toggleForm()">Cancel</button>
+          <button class="btn-save" type="submit" (click)="onSubmit()">Save</button>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+</div>

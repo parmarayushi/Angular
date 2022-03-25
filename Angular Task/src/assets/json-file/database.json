@@ -1,0 +1,278 @@
+{
+  "department": [
+    {
+      "id": 1,
+      "name": "Frontend"
+    },
+    {
+      "id": 2,
+      "name": "QA"
+    },
+    {
+      "id": 3,
+      "name": "Database"
+    },
+    {
+      "id": 4,
+      "name": ".NET"
+    },
+    {
+      "id": 5,
+      "name": "Android"
+    }
+  ],
+  "form": [
+    {
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "9421658732",
+      "gender": "female",
+      "date": "2022-02-16",
+      "department": "1",
+      "id": 1
+    },
+    {
+      "firstName": "nirali",
+      "lastName": "tandel",
+      "email": "nirali@gmail.com",
+      "contact": "6548216826",
+      "gender": "female",
+      "date": "2022-03-10",
+      "department": "3",
+      "id": 2
+    },
+    {
+      "firstName": "Yash",
+      "lastName": "parmar",
+      "email": "yashp@gmail.com",
+      "contact": "1236547890",
+      "gender": "male",
+      "date": "2021-08-10",
+      "department": "2",
+      "id": 3
+    },
+    {
+      "firstName": "mrunal",
+      "lastName": "patel",
+      "email": "mrunalpatel2@gmail.com",
+      "contact": "9254592164",
+      "gender": "male",
+      "date": "2022-02-27",
+      "department": "4",
+      "id": 4
+    },
+    {
+      "firstName": "ankit",
+      "lastName": "Patel",
+      "email": "ankit123@gmail.com",
+      "contact": "9421658732",
+      "gender": "male",
+      "date": "2022-03-16",
+      "department": "1",
+      "id": 5
+    },
+    {
+      "firstName": "Jigar",
+      "lastName": "Bhanushali",
+      "email": "jigar@gmail.com",
+      "contact": "9421658732",
+      "gender": "male",
+      "date": "2022-03-18",
+      "department": "5",
+      "id": 6
+    }
+  ],
+  "resume": [
+    {
+      "name": "Aayushi Parmar",
+      "designation": "FrontendDeveloper",
+      "email": "aayushiparmar812@gmail.com",
+      "contact": "9403260256",
+      "technicalskills": [
+        {
+          "technicalskills": "HTML"
+        },
+        {
+          "technicalskills": "CSS"
+        },
+        {
+          "technicalskills": "Javascript"
+        },
+        {
+          "technicalskills": "Angular"
+        },
+        {
+          "technicalskills": "Wordpress"
+        }
+      ],
+      "experience": [
+        {
+          "name": "Facebook",
+          "year": "2015-2018",
+          "post": "Senior Interface Designer"
+        }
+      ],
+      "education": [
+        {
+          "university": "Vnsgu",
+          "cgpa": "7.5"
+        }
+      ],
+      "id": 1
+    }
+  ],
+  "users": [
+    {
+      "firstName": "nirali",
+      "lastName": "tandel",
+      "email": "nirali@gmail.com",
+      "contact": "7345678956",
+      "client": "1",
+      "office": "1",
+      "id": 3
+    },
+    {
+      "id": 10,
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar@gmail.com",
+      "contact": "9542158762",
+      "client": "1",
+      "office": "1"
+    },
+    {
+      "firstName": "Yash",
+      "lastName": "Parmar",
+      "email": "yashparmar87@gmail.com",
+      "contact": "9542158762",
+      "client": "1",
+      "office": "2",
+      "id": 12
+    },
+    {
+      "firstName": "Mrunal",
+      "lastName": "Patel",
+      "email": "mrunalpatel@gmail.com",
+      "contact": "9542158762",
+      "client": "1",
+      "office": "2",
+      "id": 14
+    },
+    {
+      "id": 15,
+      "firstName": "sneha",
+      "lastName": "mistry",
+      "email": "snehamistyry@gmail.com",
+      "contact": "9542158762",
+      "client": "2",
+      "office": "1"
+    },
+    {
+      "id": 16,
+      "firstName": "Aayushi",
+      "lastName": "Parmar",
+      "email": "aayushiparmar@gmail.com",
+      "contact": "9542158762",
+      "client": "1",
+      "office": "3"
+    },
+    {
+      "id": 17,
+      "firstName": "Yash",
+      "lastName": "Parmar",
+      "email": "yashparmar87@gmail.com",
+      "contact": "9542158762",
+      "client": "2",
+      "office": "2"
+    },
+    {
+      "id": 18,
+      "firstName": "Yash",
+      "lastName": "Parmar",
+      "email": "yashparmar87@gmail.com",
+      "contact": "9542158762",
+      "client": "1",
+      "office": "1"
+    },
+    {
+      "id": 19,
+      "firstName": "Yash",
+      "lastName": "Parmar",
+      "email": "yashparmar87@gmail.com",
+      "contact": "9542158762",
+      "client": "1",
+      "office": "1"
+    },
+    {
+      "id": 20,
+      "firstName": "Yash",
+      "lastName": "Parmar",
+      "email": "yashparmar87@gmail.com",
+      "contact": "9542158762",
+      "client": "2",
+      "office": "1"
+    },
+    {
+      "id": 21,
+      "firstName": "Nirali",
+      "lastName": "Patel",
+      "email": "mrunalpatel@gmail.com",
+      "contact": "9542158762",
+      "client": "3",
+      "office": "2"
+    }
+  ],
+  "client": [
+    {
+      "id": 1,
+      "clientname": "Apple"
+    },
+    {
+      "id": 2,
+      "clientname": "JBL"
+    },
+    {
+      "id": 3,
+      "clientname": "1Rivet"
+    }
+  ],
+  "office": [
+    {
+      "id": 1,
+      "officename": "Office1"
+    },
+    {
+      "id": 2,
+      "officename": "Office2"
+    },
+    {
+      "id": 3,
+      "officename": "Office3"
+    }
+  ],
+  "customer": [
+    {
+      "firstname": "aayushi",
+      "lastname": "parmar",
+      "city": "ahmedavad",
+      "contactno": "9451287512",
+      "email": "aayushiparmar812@gmail.com",
+      "age": "22",
+      "department": "2",
+      "gender": "female",
+      "id": 10
+    },
+    {
+      "firstname": "bsad",
+      "lastname": "sadsdg",
+      "city": "valsad",
+      "contactno": "25432154321",
+      "email": "aayushiparmar812@gmail.com",
+      "age": "20",
+      "department": "3",
+      "gender": "male",
+      "id": 11
+    }
+  ]
+}
