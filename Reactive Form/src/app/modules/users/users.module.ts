@@ -29,7 +29,7 @@ import { FormModelComponent } from './form-model/form-model.component';
     UsersRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule,
+    // HttpClientModule,
     OverlayModule
   ],
   providers:[

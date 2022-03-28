@@ -27,7 +27,7 @@ import { SortclientPipe } from './pipes/sortclient.pipe';
     CommonModule,
     FormsModule, 
     ReactiveFormsModule,
-    HttpClientModule,
+    // HttpClientModule,
     UserRegistrationRoutingModule
   ],
    providers: [

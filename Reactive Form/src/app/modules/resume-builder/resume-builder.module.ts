@@ -20,7 +20,7 @@ import { ResumeService } from './services/resume.service';
     CommonModule,
     ResumeBuilderRoutingModule,
     ReactiveFormsModule,
-    HttpClientModule
+    // HttpClientModule
   ],
   providers:[
     ResumeService

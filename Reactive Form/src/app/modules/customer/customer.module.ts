@@ -28,7 +28,7 @@ import { OverlayModule } from '@angular/cdk/overlay';
   imports: [
     CommonModule,
     CustomerRoutingModule,
-    HttpClientModule,
+    // HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
     OverlayModule

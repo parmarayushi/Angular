@@ -41,11 +41,11 @@ export class Customer {
   }
 
   export class Filter{
-    customerage:number;
+    age:number;
     city:string;
     gender:string;
-    constructor(customerage:number,city:string,gender:string){
-      this.customerage=customerage;
+    constructor(age:number,city:string,gender:string){
+      this.age=age;
       this.city=city;
       this.gender=gender;
     }

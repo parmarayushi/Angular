@@ -1,0 +1,43 @@
+.container {
+  padding: 20px;
+  margin: 0 auto;
+  width: 800px;
+  background-color: white;
+  line-height: 1.5;
+  overflow: scroll;
+  height: 50%;
+}
+
+h2 {
+  padding: 20px 0 0 20px;
+  font-weight: 400;
+}
+.text-box {
+  width: 50%;
+}
+
+.text-area {
+  height: 50px;
+  resize: none;
+}
+.text-danger {
+  color: red;
+}
+
+.button {
+  margin: 5px;
+}
+
+.btn {
+  width: 100px;
+  height: 40px;
+  background-color: #2f55e4;
+  color: white;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.form-wrapper {
+  height: 100%;
+  overflow: hidden;
+}

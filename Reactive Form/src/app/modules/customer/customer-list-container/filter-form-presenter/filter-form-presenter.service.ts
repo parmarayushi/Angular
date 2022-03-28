@@ -19,7 +19,7 @@ public filterData$:Observable<Filter[]>
 
   buildForm(){
     return this.fb.group({
-      customerage: [''],
+      age: [''],
       city: [''],
       gender: ['']
     })

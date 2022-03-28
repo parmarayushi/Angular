@@ -14,9 +14,7 @@ export class CustomerListPresentationComponent implements OnInit {
 
   @Input() public set customerList(value:Customer[] |  null){
     if(value){
-      console.log(this.filterList)
       this._customerList=value;
-      // console.log(value);
     }  
   }
 
@@ -27,7 +25,6 @@ export class CustomerListPresentationComponent implements OnInit {
   @Input() public set departmentList(value:Department[] |  null){
     if(value){
       this._departmentList=value;
-      // console.log(value);
     }  
   }
 
@@ -37,7 +34,6 @@ export class CustomerListPresentationComponent implements OnInit {
 
   @Output() public delete:EventEmitter<number>;
 
-  public filterList:Filter;
   private _customerList: Customer[];
   private _departmentList:Department[];
   constructor(private customerListPresenter:CustomerListPresenterService ,private router:Router,private cdr:ChangeDetectorRef) { 
@@ -51,9 +47,11 @@ export class CustomerListPresentationComponent implements OnInit {
     })
 
     this.customerListPresenter.filter$.subscribe(res=>{
-      const newCustomerList=this._customerList.filter(data=> data.age == res.customerage);
-      console.log(newCustomerList);    
-      this._customerList = newCustomerList;  
+      // const newCustomerList=this._customerList.filter(data=> data.age == res.customerage);
+      // console.log(newCustomerList);    
+      // this._customerList = newCustomerList;  
+      
+      this._customerList=res;
       this.cdr.detectChanges();
     })
   }
@@ -67,6 +65,6 @@ export class CustomerListPresentationComponent implements OnInit {
   }
 
   onFilterSubmit(){
-    this.customerListPresenter.openFilterModel();
+    this.customerListPresenter.openFilterModel(this._customerList);
   }
 }
