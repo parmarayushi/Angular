@@ -1,55 +1,66 @@
 <div class="list-wrapper d-flex flex-column">
-    <h3 class="m-3 fw-bolder">Form List</h3>
-    <!-- <div>
-      <input type="search" placeholder="Search" [(ngModel)]="searchText" />
-      <button class="button" routerLink="add">Add</button>
-    </div> -->
-    <div class="wrapper">
-        <button  type="button" class="btn-adduser" routerLink="../add">
-          + Add User
-        </button>
-        <button type="button" class="btn-adduser" (click)="onFilterSubmit()" >
-        Filter
-        </button>
+  <h2>Form List</h2>
+  <div class="wrapper">
+    <div class="search">
+      <span
+        ><input
+          type="text"
+          placeholder="Search..."
+          class="search-bar"
+          [(ngModel)]="searchText"
+      /></span>
+      <span class="icon-search search-icon"></span>
     </div>
-    <div class="table">
-      <table>
-        <thead>
-          <tr>
-            <th scope="col" class="padding-left">Id</th>
-            <th scope="col">FirstName</th>
-            <th scope="col">LastName</th>
-            <th scope="col">City</th>
-            <th scope="col">Contact No.</th>
-            <th scope="col">Email</th>
-            <th scope="col">Age</th>
-            <th scope="col">Department</th>
-            <th scope="col">Gender</th>
-            <th scope="col" class="d-flex justify-content-center">Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-        <tr *ngFor="let item of customerList ,let i=index">
-        <th scope="row" class="padding-left">{{ i + 1 }}.</th>
-        <td>{{ item.firstname }}</td>
-        <td>{{ item.lastname }}</td>
-        <td>{{ item.city }}</td>
-        <td>{{ item.contactno }}</td>
-        <td>{{ item.email }}</td>
-        <td>{{ item.age }}</td>
-        <td>{{ item.department | department:departmentList }}</td>
-        <td>{{ item.gender }}</td>
-            <td class="d-flex justify-content-center">
-              <button class="button btn-edit" (click)="onEdit(item.id)">
-                Edit
-              </button>
-              <button class="button btn-delete" (click)="onDelete(item.id)">
-                Delete
-              </button>
-            </td>
-          </tr>
-        </tbody>
-      </table>
+    <div>
+
+      <button  type="button" class="btn-adduser" routerLink="../add">
+        + Add User
+      </button>
+      <button type="button" class="btn-filteruser" (click)="onFilterSubmit()" >
+      Filter
+      </button>
     </div>
   </div>
-  
+  <div class="table">
+    <table>
+      <thead>
+        <tr (click)="sort($event)">
+          <th scope="col" class="padding-left" data-value="id">Id</th>
+          <th scope="col" data-value="firstname">FirstName</th>
+          <th scope="col" data-value="lastname">LastName</th>
+          <th scope="col" data-value="city">City</th>
+          <th scope="col" data-value="contactno">Contact No.</th>
+          <th scope="col" data-value="email">Email</th>
+          <th scope="col" data-value="age">Age</th>
+          <th scope="col" data-value="department">Department</th>
+          <th scope="col" data-value="gender">Gender</th>
+          <th scope="col" class="d-flex justify-content-center">Actions</th>
+        </tr>
+      </thead>
+      <tbody *ngIf="_newCustomerList?.length">
+      <tr *ngFor="let item of _newCustomerList | search: searchText ,let i=index">
+      <th scope="row" class="padding-left">{{ i + 1 }}.</th>
+      <td>{{ item.firstname }}</td>
+      <td>{{ item.lastname }}</td>
+      <td>{{ item.city }}</td>
+      <td>{{ item.contactno }}</td>
+      <td>{{ item.email }}</td>
+      <td>{{ item.age }}</td>
+      <td>{{ item.department | department:departmentList }}</td>
+      <td>{{ item.gender }}</td>
+          <td class="d-flex justify-content-center">
+            <button type="button" class="button btn-edit" (click)="onEdit(item.id)">
+              Edit
+            </button>
+            <button type="button" class="button btn-delete" (click)="onDelete(item.id)">
+              Delete
+            </button>
+          </td>
+        </tr>
+      </tbody>
+      <div *ngIf="!_newCustomerList?.length">No Record Inserted...</div>
+    </table>
+
+  </div>
+  <app-pagination [items]="customerList" [itemsPerPage]="5" (changePage)="changePage($event)" class="d-flex justify-content-center align-items-center"></app-pagination>
+</div>

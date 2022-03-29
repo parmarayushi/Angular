@@ -12,13 +12,18 @@ import { CustomerListPresenterService } from '../customer-list-presenter/custome
 })
 export class CustomerListPresentationComponent implements OnInit {
 
+  searchText:string="";
+
   @Input() public set customerList(value:Customer[] |  null){
     if(value){
+      if(!this._newCustomerList){
+        this._newCustomerList=value;
+      }
       this._customerList=value;
     }  
   }
 
-  public get customerList():Customer[] | null{
+  public get customerList():Customer[] {
     return this._customerList;
   }
 
@@ -34,9 +39,12 @@ export class CustomerListPresentationComponent implements OnInit {
 
   @Output() public delete:EventEmitter<number>;
 
+  private _newCustomerList:Customer[];
   private _customerList: Customer[];
+  public _newcustomer: Customer[];
   private _departmentList:Department[];
   constructor(private customerListPresenter:CustomerListPresenterService ,private router:Router,private cdr:ChangeDetectorRef) { 
+    this.searchText = "";
     this._departmentList=[];
     this.delete=new EventEmitter();
   }
@@ -65,6 +73,13 @@ export class CustomerListPresentationComponent implements OnInit {
   }
 
   onFilterSubmit(){
-    this.customerListPresenter.openFilterModel(this._customerList);
+    this.customerListPresenter.openFilterModel(this._newCustomerList);
   }
+
+  changePage(userList:Customer[]) {
+    this._newcustomer = userList;
+  //  this.cdr.markForCheck();
+  //  console.log(this.customerList);
+
+}
 }

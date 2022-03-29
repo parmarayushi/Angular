@@ -13,6 +13,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DepartmentPipe } from './pipe/department.pipe';
 import { FilterFormPresentationComponent } from './customer-list-container/filter-form-presentation/filter-form-presentation.component';
 import { OverlayModule } from '@angular/cdk/overlay';
+import { SearchPipe } from './pipe/search.pipe';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 
 @NgModule({
@@ -23,7 +25,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
     CustomerFormPresentationComponent,
     CustomerListPresentationComponent,
     DepartmentPipe,
-    FilterFormPresentationComponent
+    FilterFormPresentationComponent,
+    SearchPipe
   ],
   imports: [
     CommonModule,
@@ -31,7 +34,8 @@ import { OverlayModule } from '@angular/cdk/overlay';
     HttpClientModule,
     ReactiveFormsModule,
     FormsModule,
-    OverlayModule
+    OverlayModule,
+    SharedModule
   ],
   providers:[
     CustomerService

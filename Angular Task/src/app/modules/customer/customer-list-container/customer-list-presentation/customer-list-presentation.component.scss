@@ -9,14 +9,45 @@
   align-items: center;
   height: 70px;
   padding-left: 30px;
-  padding-right: 30px;
+  padding-right: 50px;
   background-color: #ececee;
 }
+.search-bar {
+  width: 300px;
+  height: 40px;
+  padding-left: 40px;
+  border-radius: 10px;
+  border: #f1f1f3;
+  outline: none;
+}
+
+.search {
+  position: relative;
+}
+
+.search-icon {
+  position: absolute;
+  top: 33%;
+  left: 5%;
+  font-size: 0.8rem;
+}
+
 
 .btn-adduser {
   width: 160px;
   height: 40px;
   background-color: #2f55e4;
+  color: white;
+  border-radius: 10px;
+  margin-right: 20px;
+  border: 0;
+}
+
+
+.btn-filteruser {
+  width: 160px;
+  height: 40px;
+  background-color: #198754;
   color: white;
   border-radius: 10px;
   border: 0;
