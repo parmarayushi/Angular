@@ -8,7 +8,7 @@ import {
   Output,
 } from '@angular/core';
 import { Router } from '@angular/router';
-import { Customer, Department, Filter } from '../../customer.model';
+import { Customer, Department} from '../../customer.model';
 import { CustomerListPresenterService } from '../customer-list-presenter/customer-list-presenter.service';
 
 @Component({
