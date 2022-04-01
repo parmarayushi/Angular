@@ -329,5 +329,85 @@
       "gender": "male",
       "id": 16
     }
+  ],
+  "files": [
+    {
+      "name": ".bash_history",
+      "size": 215,
+      "type": "",
+      "id": 1
+    },
+    {
+      "name": ".bash_history",
+      "size": 215,
+      "type": "",
+      "id": 2
+    },
+    {
+      "name": "download.jpg",
+      "size": 12442,
+      "type": "image/jpeg",
+      "id": 3
+    },
+    {
+      "name": "download.jpg",
+      "size": 12442,
+      "type": "image/jpeg",
+      "id": 4
+    },
+    {
+      "name": "download.jpg",
+      "size": 0,
+      "type": "image/jpeg",
+      "id": 5
+    },
+    {
+      "name": "download.jpg",
+      "size": 0,
+      "type": "image/jpeg",
+      "id": 6
+    },
+    {
+      "name": "NTUSER.DAT",
+      "size": 1,
+      "type": "",
+      "id": 7
+    },
+    {
+      "name": "Read Me.txt",
+      "size": 0,
+      "type": "text/plain",
+      "id": 8
+    },
+    {
+      "name": "scss.zip",
+      "size": 0,
+      "type": "application/x-zip-compressed",
+      "id": 9
+    },
+    {
+      "name": "dummy server.zip",
+      "size": 1,
+      "type": "application/x-zip-compressed",
+      "id": 10
+    },
+    {
+      "name": "package.json",
+      "size": 0,
+      "type": "application/json",
+      "id": 11
+    },
+    {
+      "name": ".gitignore",
+      "size": 0,
+      "type": "text/plain",
+      "id": 12
+    },
+    {
+      "name": "selection.json",
+      "size": 0,
+      "type": "application/json",
+      "id": 13
+    }
   ]
 }

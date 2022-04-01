@@ -73,6 +73,6 @@ export class CustomerListPresenterService {
   }
 
   sortBy(sortBy: string, customerData: Customer[], isDesc: boolean) {
-    customerData.sort(Customer.comparator(sortBy as keyof Customer, isDesc ? 1 : -1));
+    return customerData.sort(Customer.comparator(sortBy as keyof Customer, isDesc ? 1 : -1));
   }
 }

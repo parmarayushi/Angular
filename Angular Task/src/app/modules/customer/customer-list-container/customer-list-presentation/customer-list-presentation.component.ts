@@ -46,8 +46,9 @@ export class CustomerListPresentationComponent implements OnInit {
 
   @Output() public delete: EventEmitter<number>;
 
-  public _newCustomerList: Customer[];
   private _customerList: Customer[];
+  public _newCustomerList: Customer[];
+  public newcustomerList!: Customer[];
   private _departmentList: Department[];
   constructor(
     private customerListPresenter: CustomerListPresenterService,
@@ -87,8 +88,8 @@ export class CustomerListPresentationComponent implements OnInit {
   }
 
   changePage(userList: Customer[]) {
-    this._newCustomerList = userList;
-    //  this.cdr.markForCheck();
+    this.newcustomerList = userList;
+     this.cdr.markForCheck();
     //  console.log(this.customerList);
   }
 
@@ -105,7 +106,7 @@ export class CustomerListPresentationComponent implements OnInit {
       this.isDesc = true;
     }
     console.log(this.sortedBy, this.isDesc)
-    this.customerListPresenter.sortBy(sortBy, this._newCustomerList, this.isDesc);
+    this.newcustomerList = this.customerListPresenter.sortBy(sortBy, this._newCustomerList, this.isDesc);
     // console.log(this._newCustomerList)
     // this.cdr.markForCheck();
   }

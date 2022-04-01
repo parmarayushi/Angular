@@ -8,5 +8,11 @@
   
   html,
   body {
+    overflow: hidden;
     height: 100%;
+  }
+
+  .overflow-vertical{
+    overflow-y: auto;
+    overflow-x: hidden;
   }
