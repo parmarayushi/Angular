@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { FileUploadService } from './file-upload.service';
-import { MyFile } from './file.modal';
+import { MyFile } from './file.model';
 
 @Component({
   selector: 'app-file-upload',
@@ -17,16 +17,41 @@ export class FileUploadComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.filesList$ = this.fileService.getFiles();
+    this.filesList$ = this.fileService.getFile();
+  }
+
+  addFile(file:MyFile){
+    this.filesList$.subscribe({
+      next:(list)=>{
+        let isFile=list.find((res)=>{
+          return res.name===file.name
+        })
+        
+        if (isFile){
+          console.log(isFile)
+          alert("Duplicate File");
+        }
+        else{
+          this.UploadFile(file);
+        }
+      }
+    })
   }
 
   UploadFile(file: MyFile) {
-    this.fileService.addFiles(file).subscribe({
+    this.fileService.addFile(file).subscribe({
       next: () => {
         alert("File Added Successfully");
-        this.filesList$ = this.fileService.getFiles();
+        this.filesList$ = this.fileService.getFile();
       },
       error: (e) => { console.log(e) }
+    })
+  }
+
+  DeleteFile(id:number){
+    this.fileService.deleteFile(id).subscribe(()=>{
+      alert( "File Deleted Successfully");
+      this.filesList$ = this.fileService.getFile();
     })
   }
 }

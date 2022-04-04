@@ -1,16 +1,17 @@
-<div appFileDragNDrop class="container d-flex flex-column align-items-center justify-content-center bg-white m-4 p-4 rounded" (readFile)="readFile($event)">
-    <input type="file" name="" id="" (change)="readFile($event.target)">
-    <button type="button" class="btn btn-primary m-3 rounded" (click)="uploadFile()">Upload</button>
-    <p *ngIf="file">{{file.name}} File is Ready to Upload</p>
+<div appFileDragNDrop
+    class="container d-flex flex-column align-items-center justify-content-center bg-white m-4 p-4 rounded"
+    (readFile)="readFile($event)">
+    <input type="file" class="form-control" (change)="readFile($event.target)">
+    <button type="button" class="btn btn-primary m-3 rounded" (click)="uploadFile()">Upload File</button>
+    <p *ngIf="file">({{file.name}}) file is ready to upload</p>
 </div>
 
 <div class="container bg-white d-flex align-items-center justify-content-center p-5 m-4">
     <form>
         <label for="startDate">From:</label>
-        <input type="date" id="startDate" class="ms-2" (change)="readStartDate($event)"  min="{{startDate}}">
+        <input type="date" id="startDate" class="ms-2" (change)="readStartDate($event)" min="{{startDate}}">
 
         <label for="endDate" class="ms-3">To:</label>
-        <input type="date" id="endDate" class="ms-2" (change)="readEndDate($event)"  max="{{endDate}}">
+        <input type="date" id="endDate" class="ms-2" (change)="readEndDate($event)" max="{{endDate}}">
     </form>
 </div>
-

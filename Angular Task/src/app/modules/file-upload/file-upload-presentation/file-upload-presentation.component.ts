@@ -1,6 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { FileUploadPresenterService } from '../file-upload-presenter/file-upload-presenter.service';
-import { MyFile } from '../file.modal';
+import { MyFile } from '../file.model';
 
 @Component({
   selector: 'app-file-upload-presentation',

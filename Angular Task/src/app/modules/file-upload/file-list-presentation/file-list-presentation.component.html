@@ -2,16 +2,19 @@
     <table class="table table-striped">
         <thead class="bg-dark text-white">
             <th class="p-2">Name</th>
-            <th class="p-2 text-center">Size</th>
-            <th class="p-2 text-center">Type</th>
+            <th>Size</th>
+            <th>Type</th>
             <th class="p-2">Action</th>
         </thead>
         <tbody>
             <tr *ngFor="let filedata of fileList">
-                <td>{{filedata.name}}</td>
-                <td class="text-center">{{filedata.size}} mb</td>
-                <td class="text-center">{{filedata.type}}</td>
-                <td><button class="btn btn-danger">Delete</button></td>
+                <td class="align-middle">{{filedata.name}}</td>
+                <td class="align-middle">{{filedata.size}} mb</td>
+                <td class="align-middle">{{filedata.type}}</td>
+                <td class="align-middle"><button class="btn btn-danger" (click)="onDelete(filedata.id)">Delete</button>
+                    <button class="btn btn-primary ms-3"
+                        (click)="viewFile(filedata.content,filedata.type)">View</button>
+                </td>
             </tr>
         </tbody>
     </table>
