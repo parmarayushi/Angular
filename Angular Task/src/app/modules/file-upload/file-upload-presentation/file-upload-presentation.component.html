@@ -1,9 +1,8 @@
 <div appFileDragNDrop
     class="container d-flex flex-column align-items-center justify-content-center bg-white m-4 p-4 rounded"
     (readFile)="readFile($event)">
-    <input type="file" class="form-control" (change)="readFile($event.target)">
+    <input type="file" class="form-control" multiple (change)="readFile($event.target)">
     <button type="button" class="btn btn-primary m-3 rounded" (click)="uploadFile()">Upload File</button>
-    <p *ngIf="file">({{file.name}}) file is ready to upload</p>
 </div>
 
 <div class="container bg-white d-flex align-items-center justify-content-center p-5 m-4">

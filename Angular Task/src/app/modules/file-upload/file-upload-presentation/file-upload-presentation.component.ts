@@ -9,7 +9,7 @@ import { MyFile } from '../file.model';
 })
 export class FileUploadPresentationComponent implements OnInit {
 
-  public file: File;
+  public files: FileList;
   public startDate:string;
   public endDate:string;
 
@@ -28,13 +28,13 @@ export class FileUploadPresentationComponent implements OnInit {
     })
   }
 
-  readFile(files: any) {
-    this.file = files.files[0];
+  readFile(filedata: any) {
+    this.files = filedata.files;
   }
 
   uploadFile() {
-    if (this.file) {
-      this.fileUploadPrensenter.uploadFile(this.file)
+    if (this.files) {
+      this.fileUploadPrensenter.uploadFile(this.files)
     }
     else {
       alert("No File is Selected")
