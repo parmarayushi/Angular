@@ -28,7 +28,7 @@ export class FileListPresenterService {
     }
     const byteArray = new Uint8Array(byteNumbers);
     const blob = new Blob([byteArray], { type: type });
-    const url = URL.createObjectURL(blob);
+    const url = URL .createObjectURL(blob);
     window.open(url);
   }
 }

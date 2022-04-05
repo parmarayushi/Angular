@@ -3,7 +3,10 @@
     (readFile)="readFile($event)">
     <input type="file" class="form-control" multiple (change)="readFile($event.target)">
     <button type="button" class="btn btn-primary m-3 rounded" (click)="uploadFile()">Upload File</button>
+
+    <p *ngFor="let files of filelist">{{files.name}}
 </div>
+
 
 <div class="container bg-white d-flex align-items-center justify-content-center p-5 m-4">
     <form>
