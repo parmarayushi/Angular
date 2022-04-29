@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'app';
-  src:  url('fonts/app.eot?kylfqc');
-  src:  url('fonts/app.eot?kylfqc#iefix') format('embedded-opentype'),
-    url('fonts/app.ttf?kylfqc') format('truetype'),
-    url('fonts/app.woff?kylfqc') format('woff'),
-    url('fonts/app.svg?kylfqc#app') format('svg');
+  src:  url('fonts/app.eot?qwhw5l');
+  src:  url('fonts/app.eot?qwhw5l#iefix') format('embedded-opentype'),
+    url('fonts/app.ttf?qwhw5l') format('truetype'),
+    url('fonts/app.woff?qwhw5l') format('woff'),
+    url('fonts/app.svg?qwhw5l#app') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -52,4 +52,22 @@
 }
 .icon-exit:before {
   content: "\ea14";
+}
+.icon-pencil:before {
+  content: "\e906";
+}
+.icon-user:before {
+  content: "\e971";
+}
+.icon-user-plus:before {
+  content: "\e973";
+}
+.icon-check:before {
+  content: "\ea10";
+}
+.icon-font:before {
+  content: "\ea5c";
+}
+.icon-template:before {
+  content: "\ea72";
 }

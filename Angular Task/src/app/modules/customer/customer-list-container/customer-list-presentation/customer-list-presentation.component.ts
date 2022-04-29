@@ -1,14 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  ChangeDetectorRef,
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, ChangeDetectorRef, Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-import { Customer, Department} from '../../customer.model';
+import { Customer, Department } from '../../customer.model';
 import { CustomerListPresenterService } from '../customer-list-presenter/customer-list-presenter.service';
 
 @Component({
@@ -89,7 +81,7 @@ export class CustomerListPresentationComponent implements OnInit {
 
   changePage(userList: Customer[]) {
     this.newcustomerList = userList;
-     this.cdr.markForCheck();
+    this.cdr.markForCheck();
     //  console.log(this.customerList);
   }
 
@@ -98,7 +90,7 @@ export class CustomerListPresentationComponent implements OnInit {
 
   sort(colName: any) {
     let sortBy = colName.target.getAttribute('data-value');
-    
+
     if (this.sortedBy === sortBy) {
       this.isDesc = !this.isDesc
     } else {

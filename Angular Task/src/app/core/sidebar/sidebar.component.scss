@@ -36,6 +36,7 @@ header {
 }
 
 .username {
+  margin-bottom: 0;
   font-weight: 400;
   color: #898989;
 }
@@ -95,6 +96,7 @@ li {
   white-space: nowrap;
 }
 .menu-btn {
+  cursor: pointer;
   color: #898989;
   padding-left: 5px;
 }

@@ -11,18 +11,18 @@ import { CustomerService } from '../customer.service';
 })
 export class CustomerFormContainerComponent implements OnInit {
 
-  public id!:number;
-  public customerData$:Observable<Customer>
-  public departmentList$:Observable<Department[]>=new Observable();
+  public id!: number;
+  public customerData$: Observable<Customer>
+  public departmentList$: Observable<Department[]> = new Observable();
 
-  constructor(private customerService:CustomerService,
-    private router:Router,
-    private activatedRoute:ActivatedRoute) { 
-    this.customerData$=new Observable();
-    this.id=parseInt(this.activatedRoute.snapshot.params['id']);
+  constructor(private customerService: CustomerService,
+    private router: Router,
+    private activatedRoute: ActivatedRoute) {
+    this.customerData$ = new Observable();
+    this.id = parseInt(this.activatedRoute.snapshot.params['id']);
 
-    if (this.id){
-      this.customerData$=this.customerService.getCustomerById(this.id);
+    if (this.id) {
+      this.customerData$ = this.customerService.getCustomerById(this.id);
     }
   }
 
@@ -30,19 +30,19 @@ export class CustomerFormContainerComponent implements OnInit {
     this.getDepartments();
   }
 
-  getDepartments(){
-    this.departmentList$=this.customerService.getDepartment()
-   } 
+  getDepartments() {
+    this.departmentList$ = this.customerService.getDepartment()
+  }
 
-  addCustomerData(customerForm:Customer){
-    this.customerService.addCustomer(customerForm).subscribe(()=>{
+  addCustomerData(customerForm: Customer) {
+    this.customerService.addCustomer(customerForm).subscribe(() => {
       alert("Customer Added Successfully")
       this.router.navigateByUrl('customer/list');
     })
   }
 
   editCustomerData(form: Customer) {
-    this.customerService.editCustomer(this.id,form).subscribe(
+    this.customerService.editCustomer(this.id, form).subscribe(
       () => {
         alert('Edit success')
         this.router.navigateByUrl('customer/list');
