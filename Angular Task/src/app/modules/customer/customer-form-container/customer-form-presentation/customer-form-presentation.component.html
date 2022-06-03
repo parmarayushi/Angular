@@ -69,8 +69,8 @@
 
       <select name="department" id="department" class="department" formControlName="department">
         <option *ngFor="let department of departmentList" [value]="department.id">
-          {{ department.name }}
-        </option>
+          {{ 
+        department.name }}</option>
       </select>
 
       <div *ngIf="getvalue['department'].touched && getvalue['department'].errors">

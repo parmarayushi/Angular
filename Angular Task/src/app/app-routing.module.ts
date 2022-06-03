@@ -55,6 +55,8 @@ const routes: Routes = [
   { path: 'customer', loadChildren: () => import('./modules/customer/customer.module').then(m => m.CustomerModule) },
   { path: 'form-subject', loadChildren: () => import('./modules/form-subject/form-subject.module').then(m => m.FormSubjectModule) },
   { path: 'fileupload', loadChildren: () => import('./modules/file-upload/file-upload.module').then(m => m.FileUploadModule) },
+  { path: 'progress-bar', loadChildren: () => import('./modules/progress-bar/progress-bar.module').then(m => m.ProgressBarModule) },
+
 ];
 
 @NgModule({
